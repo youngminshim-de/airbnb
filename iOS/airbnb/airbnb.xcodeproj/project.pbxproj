@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		6EB0D0BA850193C0496DFF97 /* Pods_airbnb_airbnbUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */; };
 		D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F126B260AA0034DF4A /* AppDelegate.swift */; };
 		D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F326B260AA0034DF4A /* SceneDelegate.swift */; };
-		D41483F626B260AA0034DF4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F526B260AA0034DF4A /* ViewController.swift */; };
+		D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F526B260AA0034DF4A /* SignInViewController.swift */; };
 		D41483F926B260AA0034DF4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483F726B260AA0034DF4A /* Main.storyboard */; };
 		D41483FB26B260AD0034DF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41483FA26B260AD0034DF4A /* Assets.xcassets */; };
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		D41483EE26B260AA0034DF4A /* airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41483F126B260AA0034DF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D41483F326B260AA0034DF4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D41483F526B260AA0034DF4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D41483F526B260AA0034DF4A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D41483F826B260AA0034DF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D41483FA26B260AD0034DF4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D41483FD26B260AD0034DF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,6 @@
 				BC86814AF98787EC9FB1C51F /* Pods-airbnbTests.debug.xcconfig */,
 				6546456743A2B0C544963323 /* Pods-airbnbTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,13 +129,14 @@
 		D41483F026B260AA0034DF4A /* airbnb */ = {
 			isa = PBXGroup;
 			children = (
-				D41483F126B260AA0034DF4A /* AppDelegate.swift */,
-				D41483F326B260AA0034DF4A /* SceneDelegate.swift */,
-				D41483F526B260AA0034DF4A /* ViewController.swift */,
+				D414842826B2C6040034DF4A /* Application */,
+				D414842626B2C5E90034DF4A /* Domain */,
+				D414842526B2C5D90034DF4A /* Presentation */,
+				D414842426B2C5D30034DF4A /* Data */,
+				D41483F526B260AA0034DF4A /* SignInViewController.swift */,
 				D41483F726B260AA0034DF4A /* Main.storyboard */,
-				D41483FA26B260AD0034DF4A /* Assets.xcassets */,
-				D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */,
 				D41483FF26B260AD0034DF4A /* Info.plist */,
+				D414842726B2C5F60034DF4A /* SupportingFiles */,
 			);
 			path = airbnb;
 			sourceTree = "<group>";
@@ -157,6 +157,77 @@
 				D414841526B260AD0034DF4A /* Info.plist */,
 			);
 			path = airbnbUITests;
+			sourceTree = "<group>";
+		};
+		D414842426B2C5D30034DF4A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D414842C26B2CB4C0034DF4A /* Repositories */,
+				D414842B26B2CB0A0034DF4A /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D414842526B2C5D90034DF4A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D414842626B2C5E90034DF4A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D414842A26B2CA580034DF4A /* Entities */,
+				D414842926B2CA4C0034DF4A /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D414842726B2C5F60034DF4A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D41483FA26B260AD0034DF4A /* Assets.xcassets */,
+				D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D414842826B2C6040034DF4A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D41483F126B260AA0034DF4A /* AppDelegate.swift */,
+				D41483F326B260AA0034DF4A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D414842926B2CA4C0034DF4A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		D414842A26B2CA580034DF4A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D414842B26B2CB0A0034DF4A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D414842C26B2CB4C0034DF4A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		DFC11E529C668FD1ADCAB465 /* Frameworks */ = {
@@ -407,7 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41483F626B260AA0034DF4A /* ViewController.swift in Sources */,
+				D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */,
 				D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */,
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
 			);
