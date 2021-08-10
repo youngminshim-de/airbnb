@@ -17,6 +17,13 @@
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414840926B260AD0034DF4A /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
+		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
+		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
+		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
+		D4B67D2B26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */; };
+		D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */; };
+		D4B67D3026C0FC36000E8BB7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */; };
+		D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */; };
 		E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC2802BA0E34BBE5C5450A6 /* Pods_airbnb.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +66,13 @@
 		D414840F26B260AD0034DF4A /* airbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414841326B260AD0034DF4A /* airbnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbUITests.swift; sourceTree = "<group>"; };
 		D414841526B260AD0034DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
+		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneDIContainer.swift; sourceTree = "<group>"; };
+		D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneFlowCoordinator.swift; sourceTree = "<group>"; };
+		D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EDB3C694D00F5E4C863206B7 /* Pods-airbnb-airbnbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb-airbnbUITests.debug.xcconfig"; path = "Target Support Files/Pods-airbnb-airbnbUITests/Pods-airbnb-airbnbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnb_airbnbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +148,8 @@
 				D414842526B2C5D90034DF4A /* Presentation */,
 				D414842426B2C5D30034DF4A /* Data */,
 				D41483F526B260AA0034DF4A /* SignInViewController.swift */,
+				D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */,
+				D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */,
 				D41483F726B260AA0034DF4A /* Main.storyboard */,
 				D41483FF26B260AD0034DF4A /* Info.plist */,
 				D414842726B2C5F60034DF4A /* SupportingFiles */,
@@ -171,6 +187,7 @@
 		D414842526B2C5D90034DF4A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D4B67D2C26C0F325000E8BB7 /* Flow */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -196,8 +213,10 @@
 		D414842826B2C6040034DF4A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D4B67D2526C0F1D5000E8BB7 /* DIContainer */,
 				D41483F126B260AA0034DF4A /* AppDelegate.swift */,
 				D41483F326B260AA0034DF4A /* SceneDelegate.swift */,
+				D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 		D414842B26B2CB0A0034DF4A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -228,6 +248,23 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D4B67D2526C0F1D5000E8BB7 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */,
+				D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		D4B67D2C26C0F325000E8BB7 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		DFC11E529C668FD1ADCAB465 /* Frameworks */ = {
@@ -480,7 +517,14 @@
 			files = (
 				D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */,
 				D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */,
+				D4B67D2B26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift in Sources */,
+				D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */,
+				D4B67D3026C0FC36000E8BB7 /* NetworkService.swift in Sources */,
+				D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */,
+				D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */,
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
+				D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */,
+				D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
