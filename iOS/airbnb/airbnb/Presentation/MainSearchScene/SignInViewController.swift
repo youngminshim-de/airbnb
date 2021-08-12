@@ -9,10 +9,10 @@ import UIKit
 
 class SignInViewController: UIViewController {
     weak var coordinator: MainSearchSceneFlowCoordinator?
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = UIButton()
     }
     
     static func create() -> SignInViewController{
@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
         return viewController
     }
 
-    @IBAction func loginButtonTouched(_ sender: UIButton) {
+    @IBAction func continueButtonTouched(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 }
