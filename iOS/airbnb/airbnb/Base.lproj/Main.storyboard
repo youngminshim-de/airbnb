@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fc-1M-RKa">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,46 +14,46 @@
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="airbnb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 또는 회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-41-dBw">
-                                <rect key="frame" x="137" y="74" width="140.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="로그인 또는 회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-41-dBw">
+                                <rect key="frame" x="143.66666666666669" y="74" width="140.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4O7-6m-kUi">
-                                <rect key="frame" x="0.0" y="111" width="414" height="1"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4O7-6m-kUi">
+                                <rect key="frame" x="0.0" y="111" width="428" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="wAG-nj-ocJ"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가/지역" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYs-yF-gdT">
-                                <rect key="frame" x="16" y="128" width="382" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가/지역" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYs-yF-gdT">
+                                <rect key="frame" x="16" y="128" width="396" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="boU-ga-gfh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJM-7d-IDW">
-                                <rect key="frame" x="16" y="178" width="382" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJM-7d-IDW">
+                                <rect key="frame" x="16" y="178" width="396" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yDU-VE-U7c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화나 문자로 전화를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-P3-bs2">
-                                <rect key="frame" x="16" y="236" width="382" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="전화나 문자로 전화를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-P3-bs2">
+                                <rect key="frame" x="16" y="236" width="396" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-kq-qsy">
-                                <rect key="frame" x="16" y="285.5" width="382" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-kq-qsy">
+                                <rect key="frame" x="16" y="285.5" width="396" height="50"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.29803921568627451" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nJa-25-gxF"/>
@@ -71,28 +71,28 @@
                                     <action selector="continueButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVP-2M-5b6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="또는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-vJ-Y7V">
-                                <rect key="frame" x="192" y="355.5" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="또는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-vJ-Y7V">
+                                <rect key="frame" x="199" y="355.5" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-qs-2QV">
-                                <rect key="frame" x="16" y="365.5" width="172" height="1"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-qs-2QV">
+                                <rect key="frame" x="16" y="365.5" width="186" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zbL-Zw-u4q"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgU-Ea-Fm8">
-                                <rect key="frame" x="226" y="365.5" width="172" height="1"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgU-Ea-Fm8">
+                                <rect key="frame" x="226" y="365.5" width="186" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Xew-e0-Rjt"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7F-h8-Quw">
-                                <rect key="frame" x="16" y="401.5" width="382" height="50"/>
+                                <rect key="frame" x="16" y="431.66666666666669" width="396" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="O5R-Ol-5s4"/>
@@ -107,7 +107,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-qe-PB8">
-                                <rect key="frame" x="16" y="467.5" width="382" height="50"/>
+                                <rect key="frame" x="16" y="497.66666666666674" width="396" height="50"/>
                                 <color key="backgroundColor" red="0.91914266349999996" green="0.84878557919999997" blue="0.30571579929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ttO-kR-PkI"/>
@@ -121,8 +121,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQx-ve-HuW">
-                                <rect key="frame" x="369" y="142" width="19" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQx-ve-HuW">
+                                <rect key="frame" x="383" y="142" width="19" height="22"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="chevron.down" catalog="system"/>
                             </button>
@@ -179,24 +179,24 @@
             <objects>
                 <viewController storyboardIdentifier="MainSearchViewController" id="ZZd-hB-bfp" customClass="MainSearchViewController" customModule="airbnb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zbL-FA-keo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-NC-9fG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np4-tB-Tbe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-L0-BI4" userLabel="BannerView">
-                                                <rect key="frame" x="0.0" y="496" width="414" height="77"/>
+                                                <rect key="frame" x="0.0" y="112" width="434" height="461"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-G8-f6B">
-                                                        <rect key="frame" x="0.0" y="-112" width="414" height="189"/>
+                                                        <rect key="frame" x="0.0" y="-112" width="434" height="573"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-fM-wgi">
-                                                        <rect key="frame" x="16" y="24" width="125" height="81.5"/>
+                                                        <rect key="frame" x="16" y="23.999999999999993" width="125" height="81.333333333333314"/>
                                                         <string key="text">슬기로운 
 자연생활</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -204,13 +204,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에어비앤비가 엄선한 위시리스트를 만나보세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2q-2W-fkC">
-                                                        <rect key="frame" x="16" y="121.5" width="171" height="41"/>
+                                                        <rect key="frame" x="16" y="121.33333333333333" width="312" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdi-YE-0Ut">
-                                                        <rect key="frame" x="16" y="178.5" width="144" height="42"/>
+                                                        <rect key="frame" x="16" y="157.66666666666669" width="164" height="42"/>
                                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                         <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="8"/>
                                                         <state key="normal" title="여행 아이디어 얻기">
@@ -240,16 +240,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tE-ri-lDX" userLabel="closedTripView">
-                                                <rect key="frame" x="0.0" y="573" width="414" height="269.5"/>
+                                                <rect key="frame" x="0.0" y="573" width="434" height="269.66666666666674"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가까운 여행지 둘러보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oi-DJ-aMO">
-                                                        <rect key="frame" x="16" y="40" width="254.5" height="33.5"/>
+                                                        <rect key="frame" x="15.999999999999986" y="40" width="254.66666666666663" height="33.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-k7-Fdd">
-                                                        <rect key="frame" x="16" y="97.5" width="398" height="172"/>
+                                                        <rect key="frame" x="16" y="97.666666666666629" width="418" height="172"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="172" id="Tjf-6q-XDg"/>
@@ -327,16 +327,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xz-5i-Kaj">
-                                                <rect key="frame" x="0.0" y="842.5" width="414" height="657.5"/>
+                                                <rect key="frame" x="0.0" y="842.66666666666652" width="434" height="657.33333333333348"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어디에서나, 여행은 살아보는거야!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8B-bZ-9m9">
-                                                        <rect key="frame" x="16" y="40" width="382" height="53"/>
+                                                        <rect key="frame" x="16" y="40" width="402" height="52.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-OF-aTQ">
-                                                        <rect key="frame" x="16" y="121" width="398" height="368"/>
+                                                        <rect key="frame" x="16" y="120.66666666666674" width="418" height="368"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="368" id="qaL-af-IEQ"/>
@@ -432,19 +432,22 @@
                                 </connections>
                             </scrollView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJC-QP-2ua">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="112"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="hgu-4G-qi8"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="어디로 여행가세요?" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-6h-qbr">
-                                <rect key="frame" x="16" y="60" width="382" height="36"/>
+                                <rect key="frame" x="16" y="60" width="396" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="v1E-je-WIC"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZZd-hB-bfp" id="O5l-HJ-sfy"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AbO-9o-9qI"/>
@@ -470,7 +473,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLH-gV-dMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1957.0093457943924" y="64.794816414686835"/>
+        </scene>
+        <!--숙소찾기-->
+        <scene sceneID="wYD-dW-8mI">
+            <objects>
+                <tableViewController id="ZDv-lb-mB9" customClass="AccommodationSearchViewController" customModule="airbnb" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a5s-Et-XvU">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cFa-vL-0Qp">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="64.333335876464844"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cFa-vL-0Qp" id="RBx-P9-6Qb">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="64.333335876464844"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WNZ-7Q-Ufe">
+                                            <rect key="frame" x="16" y="0.0" width="64.333333333333329" height="64.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WNZ-7Q-Ufe" secondAttribute="height" multiplier="1:1" id="1uD-mR-g5i"/>
+                                                <constraint firstAttribute="height" constant="64" id="qew-mD-GsP"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-gP-qSn">
+                                            <rect key="frame" x="96.333333333333329" y="10" width="29.666666666666671" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차로 30분 거리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-yJ-ROc">
+                                            <rect key="frame" x="96.333333333333314" y="35" width="103" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGray3Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WNZ-7Q-Ufe" firstAttribute="leading" secondItem="RBx-P9-6Qb" secondAttribute="leading" constant="16" id="1I6-FW-Dnt"/>
+                                        <constraint firstItem="x4n-gP-qSn" firstAttribute="top" secondItem="RBx-P9-6Qb" secondAttribute="top" constant="10" id="7l4-Zq-i30"/>
+                                        <constraint firstItem="WNZ-7Q-Ufe" firstAttribute="top" secondItem="RBx-P9-6Qb" secondAttribute="top" id="J4y-nu-lNh"/>
+                                        <constraint firstItem="cWo-yJ-ROc" firstAttribute="top" secondItem="x4n-gP-qSn" secondAttribute="bottom" constant="4" id="Vj3-EG-R9A"/>
+                                        <constraint firstItem="cWo-yJ-ROc" firstAttribute="leading" secondItem="WNZ-7Q-Ufe" secondAttribute="trailing" constant="16" id="n4E-Vl-zcY"/>
+                                        <constraint firstItem="x4n-gP-qSn" firstAttribute="leading" secondItem="WNZ-7Q-Ufe" secondAttribute="trailing" constant="16" id="tpP-bG-Ank"/>
+                                        <constraint firstAttribute="bottom" secondItem="WNZ-7Q-Ufe" secondAttribute="bottom" id="vH5-4I-ohw"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZDv-lb-mB9" id="abb-mp-AO8"/>
+                            <outlet property="delegate" destination="ZDv-lb-mB9" id="EIL-6k-n10"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="숙소찾기" id="xOL-1N-o09"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCl-1E-omQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2823.3644859813085" y="64.794816414686835"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="ktn-mt-24R">
@@ -504,6 +572,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
