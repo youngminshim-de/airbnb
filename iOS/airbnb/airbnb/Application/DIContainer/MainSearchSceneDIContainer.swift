@@ -44,3 +44,9 @@ extension MainSearchSceneDIContainer {
         return SignInViewController.create()
     }
 }
+
+extension MainSearchSceneDIContainer {
+    func makeAccommodationSearchViewController() -> AccommodationSearchViewController {
+        return AccommodationSearchViewController.create()
+    }
+}

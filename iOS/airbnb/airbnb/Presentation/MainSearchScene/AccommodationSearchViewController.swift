@@ -8,7 +8,23 @@
 import UIKit
 
 class AccommodationSearchViewController: UITableViewController {
+    weak var coordinator: MainSearchSceneFlowCoordinator?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    static func create() -> AccommodationSearchViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let viewController = storyboard.instantiateViewController(identifier: "AccommodationSearchViewController") as? AccommodationSearchViewController else {
+            return AccommodationSearchViewController()
+        }
+        return viewController
+    }
+    
+    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+        self.coordinator = coordinator
+    }
 }
 
 extension AccommodationSearchViewController {

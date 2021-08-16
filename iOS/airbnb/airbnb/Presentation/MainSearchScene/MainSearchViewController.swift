@@ -75,3 +75,11 @@ extension MainSearchViewController: UIScrollViewDelegate {
         }
     }
 }
+
+extension MainSearchViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // AccommodationSearchViewController로 보내야한다.
+        coordinator?.pushAccomodationSearchViewController()
+        return true
+    }
+}

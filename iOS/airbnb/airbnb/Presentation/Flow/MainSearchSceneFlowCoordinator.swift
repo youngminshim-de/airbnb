@@ -11,6 +11,7 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     // 이 함수에 액션도 주입해줘야 한다. 페이지 넘어가는 액션
     func makeMainSearchViewController() -> MainSearchViewController
     func makeSignInViewController() -> SignInViewController
+    func makeAccommodationSearchViewController() -> AccommodationSearchViewController
 }
 
 class MainSearchSceneFlowCoordinator: Coordinator {
@@ -26,6 +27,22 @@ class MainSearchSceneFlowCoordinator: Coordinator {
         let signInViewController = dependencies.makeSignInViewController()
         signInViewController.modalPresentationStyle = .fullScreen
         rootViewController.present(signInViewController, animated: true, completion: nil)
+    }
+    
+    func pushAccomodationSearchViewController() {
+        let accommodationSerachViewContoller = dependencies.makeAccommodationSearchViewController()
+        accommodationSerachViewContoller.injectionCoordinator(coordinator: self)
+        guard let rootViewController = rootViewController as? UINavigationController else {
+            return
+        }
+        rootViewController.pushViewController(accommodationSerachViewContoller, animated: true)
+    }
+    
+    func popAccomodationSearchViewController() {
+        guard let rootViewController = rootViewController as? UINavigationController else {
+            return
+        }
+        rootViewController.popViewController(animated: true)
     }
     
     func dismissSignInViewController(_ viewController: UIViewController) {
