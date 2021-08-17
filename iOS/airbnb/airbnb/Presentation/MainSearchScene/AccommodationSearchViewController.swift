@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import MapKit
 
 class AccommodationSearchViewController: UITableViewController, UISearchBarDelegate {
     weak var coordinator: MainSearchSceneFlowCoordinator?
     private var searchController: UISearchController!
     
+    private var suggestionController: SearchSuggestionTableViewContrllerTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSuggestionController()
         setupSearchController()
     }
     
@@ -24,8 +28,13 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
         return viewController
     }
     
+    func setupSuggestionController() {
+        self.suggestionController = SearchSuggestionTableViewContrllerTableViewController(style: .grouped)
+    }
+    
     func setupSearchController() {
-        self.searchController = UISearchController()
+        self.searchController = UISearchController(searchResultsController: suggestionController)
+        self.searchController.searchResultsUpdater = suggestionController
         self.searchController.searchBar.delegate = self
         self.searchController.searchBar.placeholder = "어디로 여행가세요?"
         self.searchController.automaticallyShowsCancelButton = false
