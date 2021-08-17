@@ -24,7 +24,7 @@ class MainSearchViewController: UIViewController{
         coordinator?.presentSignInViewController()
         self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
         self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         self.searchBar.searchTextField.backgroundColor = .white
     }
     
@@ -52,10 +52,16 @@ class MainSearchViewController: UIViewController{
     func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
-//    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
 //        coordinator?.presentSignInViewController()
-//    }
+//        self.navigationController?.navigationBar.isHidden = true
+    }
 }
 
 extension MainSearchViewController: UIScrollViewDelegate {
@@ -73,5 +79,13 @@ extension MainSearchViewController: UIScrollViewDelegate {
         } else {
             topHeaderViewHeight.constant = 0
         }
+    }
+}
+
+extension MainSearchViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // AccommodationSearchViewController로 보내야한다.
+        coordinator?.pushAccomodationSearchViewController()
+        return false
     }
 }
