@@ -18,6 +18,7 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
         super.viewDidLoad()
         setupSuggestionController()
         setupSearchController()
+        self.tableView.tableHeaderView = makeTableHeaderView()
     }
     
     static func create() -> AccommodationSearchViewController {
@@ -43,6 +44,22 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationItem.searchController = searchController
         self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func makeTableHeaderView() -> UIView {
+        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 78)))
+        let label = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 177, height: 22)))
+        headerView.addSubview(label)
+        label.text = "근처의 인기 여행지"
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 16).isActive = true
+//        label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 32).isActive = true
+        label.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -24).isActive = true
+        label.font = .boldSystemFont(ofSize: 17)
+        headerView.addSubview(label)
+        return headerView
     }
     
     func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
