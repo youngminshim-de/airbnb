@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,8 +30,12 @@
 		D4B67D4326C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D4226C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift */; };
 		D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */; };
 		D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */; };
-		D4B67D9F26CA458C000E8BB7 /* SearchSuggestionTableViewContrllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrllerTableViewController.swift */; };
+		D4B67D9F26CA458C000E8BB7 /* SearchSuggestionTableViewContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrller.swift */; };
 		D4BCFB7B26D3AB4100323CF5 /* FindingAccommodationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */; };
+		D4BCFB8826D4BA2500323CF5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D4BCFB8726D4BA2500323CF5 /* FSCalendar */; };
+		D4BCFB8A26D4BA3B00323CF5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB8926D4BA3B00323CF5 /* CalendarView.swift */; };
+		D4BCFB9026D6240500323CF5 /* ReservationConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */; };
+		D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */; };
 		E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC2802BA0E34BBE5C5450A6 /* Pods_airbnb.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +91,11 @@
 		D4B67D4226C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedTripPlaceDataSource.swift; sourceTree = "<group>"; };
 		D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPopulationTripPlaceCellTableViewCell.swift; sourceTree = "<group>"; };
-		D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewContrllerTableViewController.swift; sourceTree = "<group>"; };
+		D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewContrller.swift; sourceTree = "<group>"; };
 		D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingAccommodationViewController.swift; sourceTree = "<group>"; };
+		D4BCFB8926D4BA3B00323CF5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditionCell.swift; sourceTree = "<group>"; };
+		D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditionViewDataSource.swift; sourceTree = "<group>"; };
 		EDB3C694D00F5E4C863206B7 /* Pods-airbnb-airbnbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb-airbnbUITests.debug.xcconfig"; path = "Target Support Files/Pods-airbnb-airbnbUITests/Pods-airbnb-airbnbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnb_airbnbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */,
+				D4BCFB8826D4BA2500323CF5 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +295,17 @@
 				D41483F526B260AA0034DF4A /* SignInViewController.swift */,
 				D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */,
 				D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */,
-				D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrllerTableViewController.swift */,
+				D4B67D9E26CA458C000E8BB7 /* SearchSuggestionTableViewContrller.swift */,
 				D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */,
 				D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */,
 				D4B67D4026C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift */,
 				D4B67D4226C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift */,
+				D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */,
 				D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */,
 				D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */,
 				D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */,
+				D4BCFB8926D4BA3B00323CF5 /* CalendarView.swift */,
+				D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */,
 			);
 			path = MainSearchScene;
 			sourceTree = "<group>";
@@ -327,6 +338,9 @@
 			dependencies = (
 			);
 			name = airbnb;
+			packageProductDependencies = (
+				D4BCFB8726D4BA2500323CF5 /* FSCalendar */,
+			);
 			productName = airbnb;
 			productReference = D41483EE26B260AA0034DF4A /* airbnb.app */;
 			productType = "com.apple.product-type.application";
@@ -401,6 +415,9 @@
 				Base,
 			);
 			mainGroup = D41483E526B260AA0034DF4A;
+			packageReferences = (
+				D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = D41483EF26B260AA0034DF4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -559,11 +576,14 @@
 				D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */,
 				D4B67D4326C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift in Sources */,
 				D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */,
+				D4BCFB8A26D4BA3B00323CF5 /* CalendarView.swift in Sources */,
 				D4B67D4126C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift in Sources */,
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
+				D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */,
 				D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */,
 				D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */,
-				D4B67D9F26CA458C000E8BB7 /* SearchSuggestionTableViewContrllerTableViewController.swift in Sources */,
+				D4B67D9F26CA458C000E8BB7 /* SearchSuggestionTableViewContrller.swift in Sources */,
+				D4BCFB9026D6240500323CF5 /* ReservationConditionCell.swift in Sources */,
 				D4B67D3926C26AD5000E8BB7 /* ClosedTripPlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,6 +923,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4BCFB8726D4BA2500323CF5 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D41483E626B260AA0034DF4A /* Project object */;
 }

@@ -12,6 +12,7 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeMainSearchViewController() -> MainSearchViewController
     func makeSignInViewController() -> SignInViewController
     func makeAccommodationSearchViewController() -> AccommodationSearchViewController
+    func makeFindingAccommodationViewController() -> FindingAccommodationViewController
 }
 
 class MainSearchSceneFlowCoordinator: Coordinator {
@@ -47,6 +48,15 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     
     func dismissSignInViewController(_ viewController: UIViewController) {
         viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func pushFindingAccommodationViewController() {
+        let findingAccommodationViewController = dependencies.makeFindingAccommodationViewController()
+        findingAccommodationViewController.injectionCoordinator(coordinator: self)
+        guard let rootViewController = rootViewController as? UINavigationController else {
+            return
+        }
+        rootViewController.pushViewController(findingAccommodationViewController, animated: true)
     }
     
     func start() {

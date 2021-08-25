@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class SearchSuggestionTableViewContrllerTableViewController: UITableViewController {
+class SearchSuggestionTableViewContrller: UITableViewController {
     
     private var searchCompleter: MKLocalSearchCompleter?
     private var searchResults: [MKLocalSearchCompletion]?
@@ -39,7 +39,7 @@ class SearchSuggestionTableViewContrllerTableViewController: UITableViewControll
     }
 }
 
-extension SearchSuggestionTableViewContrllerTableViewController {
+extension SearchSuggestionTableViewContrller {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults?.count ?? 0
@@ -62,7 +62,7 @@ extension SearchSuggestionTableViewContrllerTableViewController {
     }
 }
 
-extension SearchSuggestionTableViewContrllerTableViewController {
+extension SearchSuggestionTableViewContrller {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedResult = searchResults?[indexPath.row]
         let searchRequest = MKLocalSearch.Request(completion: selectedResult ?? MKLocalSearchCompletion())
@@ -82,13 +82,13 @@ extension SearchSuggestionTableViewContrllerTableViewController {
     }
 }
 
-extension SearchSuggestionTableViewContrllerTableViewController: UISearchResultsUpdating {
+extension SearchSuggestionTableViewContrller: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         searchCompleter?.queryFragment = searchController.searchBar.text ?? ""
     }
 }
 
-extension SearchSuggestionTableViewContrllerTableViewController: MKLocalSearchCompleterDelegate {
+extension SearchSuggestionTableViewContrller: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         searchResults = completer.results
         tableView.reloadData()

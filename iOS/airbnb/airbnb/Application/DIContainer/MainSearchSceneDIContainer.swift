@@ -50,3 +50,9 @@ extension MainSearchSceneDIContainer {
         return AccommodationSearchViewController.create()
     }
 }
+
+extension MainSearchSceneDIContainer {
+    func makeFindingAccommodationViewController() -> FindingAccommodationViewController {
+        return FindingAccommodationViewController.create()
+    }
+}

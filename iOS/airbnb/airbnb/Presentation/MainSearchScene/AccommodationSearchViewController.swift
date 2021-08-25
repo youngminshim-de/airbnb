@@ -12,7 +12,7 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
     weak var coordinator: MainSearchSceneFlowCoordinator?
     private var searchController: UISearchController!
     
-    private var suggestionController: SearchSuggestionTableViewContrllerTableViewController!
+    private var suggestionController: SearchSuggestionTableViewContrller!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
     }
     
     func setupSuggestionController() {
-        self.suggestionController = SearchSuggestionTableViewContrllerTableViewController(style: .grouped)
+        self.suggestionController = SearchSuggestionTableViewContrller(style: .grouped)
     }
     
     func setupSearchController() {
@@ -78,5 +78,9 @@ extension AccommodationSearchViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.pushFindingAccommodationViewController()
     }
 }
