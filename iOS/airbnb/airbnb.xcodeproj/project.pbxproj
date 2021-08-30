@@ -17,6 +17,7 @@
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414840926B260AD0034DF4A /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
+		D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */; };
 		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
 		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
@@ -73,6 +74,7 @@
 		D414840F26B260AD0034DF4A /* airbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414841326B260AD0034DF4A /* airbnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbUITests.swift; sourceTree = "<group>"; };
 		D414841526B260AD0034DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */,
+				D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */,
 				D4B67D3026C0FC36000E8BB7 /* NetworkService.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
+				D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */,
 				D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */,
 				D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */,
 				D4B67D4326C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift in Sources */,
