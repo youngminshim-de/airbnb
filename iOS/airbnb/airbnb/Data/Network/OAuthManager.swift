@@ -10,6 +10,19 @@ import AuthenticationServices
 
 class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {
     
+    enum LoginType: CustomStringConvertible {
+        var description: String {
+            switch self {
+            case .github:
+                return "github"
+            case .kakao:
+                return "kakao"
+            }
+        }
+        case kakao
+        case github
+    }
+    
     private var parentViewController: UIViewController
     private (set) static var code: String = ""
     
@@ -21,11 +34,14 @@ class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {
         return parentViewController.view.window ?? ASPresentationAnchor()
     }
     
-    func excuteOAuth(completion: @escaping (Result<User,Error>) -> Void) {
+    func excuteOAuth(with type: LoginType, completion: @escaping (Result<User,Error>) -> Void) {
         var webAuthSession: ASWebAuthenticationSession?
         
         let callbackUrlScheme = "issue-trackker"
         let url = URL(string: "https://github.com/login/oauth/authorize?client_id=a29c360109b82f566f16")
+        
+        // github url
+        // kakao url
         
         webAuthSession = ASWebAuthenticationSession.init(url: url!, callbackURLScheme: callbackUrlScheme, completionHandler: { (callBack:URL?, error:Error?) in
             guard error == nil, let successURL = callBack else {
@@ -37,6 +53,8 @@ class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {
             
             let tempString: String = "\(oauthToken!)"
             OAuthManager.code = tempString
+//            "http://52.78.45.48:8080/api/oauth/userinfo?code=qwkhegqhjwegqhjwge&type=kakao"
+//            "http://52.78.45.48:8080/api/oauth/userinfo?code=qwkhegqhjwegqhjwge&type=github"
             let urlurl: URL = URL(string: "http://52.78.45.48:8080/git/login/ios?\(tempString)")!
             var request: URLRequest = URLRequest(url: urlurl)
             request.httpMethod = "POST"
