@@ -11,6 +11,8 @@ class FindingAccommodationViewController: UIViewController {
     
     weak var coordinator: MainSearchSceneFlowCoordinator?
     private var reservationTableViewDatasource: ReservationConditionViewDataSource
+    private let calendarDelegate: CalendarViewDelegate
+    private let calendarDataSource: CalendarViewDataSource
 
     @IBOutlet weak var findingAccommodationConditionView: UIScrollView!
     @IBOutlet weak var condtionStackView: UIStackView!
@@ -21,16 +23,22 @@ class FindingAccommodationViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         self.reservationTableViewDatasource = ReservationConditionViewDataSource()
+        self.calendarDelegate = CalendarViewDelegate()
+        self.calendarDataSource = CalendarViewDataSource()
         super.init(coder: coder)
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.reservationTableViewDatasource = ReservationConditionViewDataSource()
+        self.calendarDelegate = CalendarViewDelegate()
+        self.calendarDataSource = CalendarViewDataSource()
         super.init(nibName: nil, bundle: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reservationConditionTableView.dataSource = reservationTableViewDatasource
+        self.calendarView.delegate = calendarDelegate
+        self.calendarView.dataSource = calendarDataSource
     }
     
     static func create() -> FindingAccommodationViewController{
