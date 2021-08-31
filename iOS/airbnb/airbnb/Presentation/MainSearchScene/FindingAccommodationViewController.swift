@@ -60,10 +60,13 @@ class FindingAccommodationViewController: UIViewController {
     }
     
     private func scrollView() {
+//        let totalWidth = findingAccommodationConditionView.contentSize.width
         let totalWidth = condtionStackView.frame.width
         let viewCount = condtionStackView.subviews.count
-        print(totalWidth)
-        print(totalWidth / CGFloat(viewCount) * 1)
+        print(findingAccommodationConditionView.contentSize.width)
+        print(totalWidth / CGFloat(viewCount) * 2)
+        print(self.view.frame.width)
+        print(calendarView.frame.width)
         self.findingAccommodationConditionView.setContentOffset(CGPoint(x: totalWidth / CGFloat(viewCount) * 1, y: 0), animated: true)
     }
 }
