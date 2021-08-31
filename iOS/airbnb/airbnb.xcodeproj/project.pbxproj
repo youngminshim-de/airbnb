@@ -17,6 +17,8 @@
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414840926B260AD0034DF4A /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
+		D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */; };
+		D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */; };
 		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
 		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
@@ -79,6 +81,8 @@
 		D414840F26B260AD0034DF4A /* airbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414841326B260AD0034DF4A /* airbnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbUITests.swift; sourceTree = "<group>"; };
 		D414841526B260AD0034DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -274,6 +278,24 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		D4AF9E3726DE051900E69A28 /* GraphView */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */,
+				D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */,
+			);
+			path = GraphView;
+			sourceTree = "<group>";
+		};
+		D4AF9E3826DE052500E69A28 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				D4BCFB8926D4BA3B00323CF5 /* CalendarView.swift */,
+				D4BCFB9326D671E800323CF5 /* DIYCalendarCell.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		D4B67D2526C0F1D5000E8BB7 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +316,8 @@
 		D4B67D3726C24648000E8BB7 /* MainSearchScene */ = {
 			isa = PBXGroup;
 			children = (
+				D4AF9E3826DE052500E69A28 /* CalendarView */,
+				D4AF9E3726DE051900E69A28 /* GraphView */,
 				D41483F526B260AA0034DF4A /* SignInViewController.swift */,
 				D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */,
 				D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */,
@@ -306,9 +330,7 @@
 				D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */,
 				D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */,
 				D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */,
-				D4BCFB8926D4BA3B00323CF5 /* CalendarView.swift */,
 				D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */,
-				D4BCFB9326D671E800323CF5 /* DIYCalendarCell.swift */,
 			);
 			path = MainSearchScene;
 			sourceTree = "<group>";
@@ -575,6 +597,7 @@
 				D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */,
 				D4B67D3026C0FC36000E8BB7 /* NetworkService.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
+				D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */,
 				D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */,
 				D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */,
 				D4B67D4326C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift in Sources */,
@@ -582,6 +605,7 @@
 				D4BCFB8A26D4BA3B00323CF5 /* CalendarView.swift in Sources */,
 				D4B67D4126C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift in Sources */,
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
+				D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */,
 				D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */,
 				D4BCFB9426D671E800323CF5 /* DIYCalendarCell.swift in Sources */,
 				D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */,

@@ -55,7 +55,7 @@ extension SearchSuggestionTableViewContrller {
         }
         
         if let suggestion = searchResults?[indexPath.row] {
-            cell.textLabel?.text = suggestion.subtitle
+            cell.textLabel?.text = suggestion.title
             cell.imageView?.image = UIImage(named: "marker.png")
         }
         return cell

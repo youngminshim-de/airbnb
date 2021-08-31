@@ -728,9 +728,81 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7w-TW-DY2" userLabel="CostGraphView">
                                                         <rect key="frame" x="428" y="0.0" width="428" height="513.66666666666663"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격 범위" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzW-um-tzH">
+                                                                <rect key="frame" x="16" y="32" width="63" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="₩1,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9b-tg-nlb">
+                                                                <rect key="frame" x="15.999999999999996" y="68.333333333333343" width="56.666666666666657" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩1,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUY-41-Fv7">
+                                                                <rect key="frame" x="96.333333333333371" y="68.333333333333343" width="91" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-ro-LYE">
+                                                                <rect key="frame" x="80.666666666666686" y="68.333333333333343" width="7.6666666666666714" height="20.333333333333329"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="7.6699999999999999" id="Cn6-rb-qco"/>
+                                                                    <constraint firstAttribute="height" constant="20.329999999999998" id="hbu-Xg-XJQ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9B-QB-mSW">
+                                                                <rect key="frame" x="187.33333333333337" y="68.333333333333343" width="10.333333333333343" height="20.333333333333329"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="10.33" id="gIS-GM-toc"/>
+                                                                    <constraint firstAttribute="height" constant="20.329999999999998" id="td8-P5-W0o"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUL-N9-yjt" userLabel="GraphView">
+                                                                <rect key="frame" x="16" y="158.33333333333334" width="396" height="100.00000000000003"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="xQt-ji-8a9"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평균 1박 요금은 ₩1,000 입니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5X-eZ-hUG">
+                                                                <rect key="frame" x="16" y="96" width="154.33333333333334" height="14.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" systemColor="systemGray3Color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="m5X-eZ-hUG" secondAttribute="trailing" constant="257.67000000000002" id="45t-qF-HEl"/>
+                                                            <constraint firstItem="k9B-QB-mSW" firstAttribute="leading" secondItem="hUY-41-Fv7" secondAttribute="trailing" id="8XY-Q8-RES"/>
+                                                            <constraint firstItem="HOf-ro-LYE" firstAttribute="leading" secondItem="l9b-tg-nlb" secondAttribute="trailing" constant="8" id="BxK-aG-Taf"/>
+                                                            <constraint firstItem="m5X-eZ-hUG" firstAttribute="leading" secondItem="E7w-TW-DY2" secondAttribute="leading" constant="16" id="EUH-9X-yDp"/>
+                                                            <constraint firstItem="NUL-N9-yjt" firstAttribute="leading" secondItem="E7w-TW-DY2" secondAttribute="leading" constant="16" id="J9L-ny-DEr"/>
+                                                            <constraint firstItem="HOf-ro-LYE" firstAttribute="centerY" secondItem="l9b-tg-nlb" secondAttribute="centerY" id="N3v-JE-MNx"/>
+                                                            <constraint firstItem="JzW-um-tzH" firstAttribute="top" secondItem="E7w-TW-DY2" secondAttribute="top" constant="32" id="NPi-Yv-k47"/>
+                                                            <constraint firstItem="JzW-um-tzH" firstAttribute="leading" secondItem="E7w-TW-DY2" secondAttribute="leading" constant="16" id="QJ8-Iv-LhK"/>
+                                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="NUL-N9-yjt" secondAttribute="bottom" constant="255.33000000000001" id="QJH-uR-153"/>
                                                             <constraint firstAttribute="width" secondItem="E7w-TW-DY2" secondAttribute="height" multiplier="1:1.2" id="Tmz-kH-Iyi"/>
+                                                            <constraint firstItem="l9b-tg-nlb" firstAttribute="top" secondItem="JzW-um-tzH" secondAttribute="bottom" constant="16" id="VJB-CF-wmG"/>
+                                                            <constraint firstItem="hUY-41-Fv7" firstAttribute="centerY" secondItem="l9b-tg-nlb" secondAttribute="centerY" id="YYG-wg-fBa"/>
+                                                            <constraint firstItem="l9b-tg-nlb" firstAttribute="leading" secondItem="E7w-TW-DY2" secondAttribute="leading" constant="16" id="jSa-Sd-aYA"/>
+                                                            <constraint firstItem="hUY-41-Fv7" firstAttribute="leading" secondItem="HOf-ro-LYE" secondAttribute="trailing" constant="8" id="jdd-FT-4XC"/>
+                                                            <constraint firstItem="k9B-QB-mSW" firstAttribute="centerY" secondItem="l9b-tg-nlb" secondAttribute="centerY" id="ndQ-rn-9Nc"/>
+                                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JzW-um-tzH" secondAttribute="trailing" constant="349" id="nfo-o8-1T5"/>
+                                                            <constraint firstItem="m5X-eZ-hUG" firstAttribute="top" secondItem="l9b-tg-nlb" secondAttribute="bottom" constant="7.3333333333333286" id="ohx-mB-dVv"/>
+                                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="k9B-QB-mSW" secondAttribute="trailing" constant="230.33000000000001" id="opq-EI-G7e"/>
+                                                            <constraint firstItem="NUL-N9-yjt" firstAttribute="top" secondItem="m5X-eZ-hUG" secondAttribute="bottom" constant="48" id="psJ-14-eQP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NUL-N9-yjt" secondAttribute="trailing" constant="16" id="rhS-F0-rD3"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwH-2B-V18" userLabel="PeopleCountView">
@@ -869,9 +941,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
