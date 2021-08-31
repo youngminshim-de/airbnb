@@ -18,6 +18,7 @@ class FindingAccommodationViewController: UIViewController {
     @IBOutlet weak var condtionStackView: UIStackView!
     @IBOutlet weak var calendarView: CalendarView!
     @IBOutlet weak var costGraphView: UIView!
+    @IBOutlet weak var costGraph: RangeSlider!
     @IBOutlet weak var peopleCountView: UIView!
     @IBOutlet weak var reservationConditionTableView: UITableView!
     
@@ -39,6 +40,11 @@ class FindingAccommodationViewController: UIViewController {
         self.reservationConditionTableView.dataSource = reservationTableViewDatasource
         self.calendarView.delegate = calendarDelegate
         self.calendarView.dataSource = calendarDataSource
+        scrollView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        costGraph.updateLayerFrames()
     }
     
     static func create() -> FindingAccommodationViewController{
@@ -51,5 +57,13 @@ class FindingAccommodationViewController: UIViewController {
     
     func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
+    }
+    
+    private func scrollView() {
+        let totalWidth = condtionStackView.frame.width
+        let viewCount = condtionStackView.subviews.count
+        print(totalWidth)
+        print(totalWidth / CGFloat(viewCount) * 1)
+        self.findingAccommodationConditionView.setContentOffset(CGPoint(x: totalWidth / CGFloat(viewCount) * 1, y: 0), animated: true)
     }
 }

@@ -767,7 +767,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUL-N9-yjt" userLabel="GraphView">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUL-N9-yjt" userLabel="GraphView" customClass="RangeSlider" customModule="airbnb" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="158.33333333333334" width="396" height="100.00000000000003"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
@@ -872,6 +872,7 @@
                     <connections>
                         <outlet property="calendarView" destination="q6H-l3-fof" id="hkc-Xa-y7S"/>
                         <outlet property="condtionStackView" destination="KyC-Ny-hP9" id="Ca5-VV-nq4"/>
+                        <outlet property="costGraph" destination="NUL-N9-yjt" id="9UA-Xz-OQE"/>
                         <outlet property="costGraphView" destination="E7w-TW-DY2" id="Y0p-re-Mdg"/>
                         <outlet property="findingAccommodationConditionView" destination="gLk-bq-QhA" id="EDT-kc-B9H"/>
                         <outlet property="peopleCountView" destination="lwH-2B-V18" id="b30-hO-OZN"/>

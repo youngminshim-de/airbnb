@@ -26,6 +26,11 @@ class RangeSlider: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
         trackLayer.rangeSlider = self
         trackLayer.contentsScale = UIScreen.main.scale
         layer.addSublayer(trackLayer)
@@ -37,10 +42,6 @@ class RangeSlider: UIControl {
         upperThumbImageView.image = thumbImage
         upperThumbImageView.tintColor = .systemGray4
         addSubview(upperThumbImageView)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
     func updateLayerFrames() {
