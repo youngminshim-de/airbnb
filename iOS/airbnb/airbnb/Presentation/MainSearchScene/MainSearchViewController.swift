@@ -24,8 +24,12 @@ class MainSearchViewController: UIViewController{
         coordinator?.presentSignInViewController()
         self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
         self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
-//        self.navigationController?.navigationBar.isHidden = true
         self.searchBar.searchTextField.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -51,16 +55,6 @@ class MainSearchViewController: UIViewController{
     
     func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isHidden = false
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-//        coordinator?.presentSignInViewController()
-//        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
