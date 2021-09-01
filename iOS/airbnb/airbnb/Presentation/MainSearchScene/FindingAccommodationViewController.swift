@@ -15,12 +15,17 @@ class FindingAccommodationViewController: UIViewController {
     private let calendarDataSource: CalendarViewDataSource
 
     @IBOutlet weak var findingAccommodationConditionView: UIScrollView!
-    @IBOutlet weak var condtionStackView: UIStackView!
+    @IBOutlet weak var conditionStackView: UIStackView!
     @IBOutlet weak var calendarView: CalendarView!
     @IBOutlet weak var costGraphView: UIView!
     @IBOutlet weak var costGraph: RangeSlider!
     @IBOutlet weak var peopleCountView: UIView!
     @IBOutlet weak var reservationConditionTableView: UITableView!
+    
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    private var currentView: CurrentView = .calendarView
     
     required init?(coder: NSCoder) {
         self.reservationTableViewDatasource = ReservationConditionViewDataSource()
@@ -40,14 +45,14 @@ class FindingAccommodationViewController: UIViewController {
         self.reservationConditionTableView.dataSource = reservationTableViewDatasource
         self.calendarView.delegate = calendarDelegate
         self.calendarView.dataSource = calendarDataSource
-        scrollView()
     }
     
     override func viewDidLayoutSubviews() {
         costGraph.updateLayerFrames()
+        setButtonState()
     }
-    
-    static func create() -> FindingAccommodationViewController{
+        
+    static func create() -> FindingAccommodationViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(identifier: "FindingAccommodationViewController") as? FindingAccommodationViewController else {
             return FindingAccommodationViewController()
@@ -60,13 +65,56 @@ class FindingAccommodationViewController: UIViewController {
     }
     
     private func scrollView() {
-//        let totalWidth = findingAccommodationConditionView.contentSize.width
-        let totalWidth = condtionStackView.frame.width
-        let viewCount = condtionStackView.subviews.count
-        print(findingAccommodationConditionView.contentSize.width)
-        print(totalWidth / CGFloat(viewCount) * 2)
-        print(self.view.frame.width)
-        print(calendarView.frame.width)
-        self.findingAccommodationConditionView.setContentOffset(CGPoint(x: totalWidth / CGFloat(viewCount) * 1, y: 0), animated: true)
+        let totalWidth = findingAccommodationConditionView.contentSize.width
+//        let totalWidth = conditionStackView.frame.width
+        let viewCount = CGFloat(conditionStackView.subviews.count)
+        currentView = currentView.nextState
+        
+        if currentView == .peopleCountView {
+            // 숙소 리스트 뷰컨트롤러 이동
+            // coordinator.pushViewController
+        }
+        setButtonState()
+        self.findingAccommodationConditionView.setContentOffset(CGPoint(x: Int(totalWidth / viewCount) * currentView.rawValue, y: 0), animated: true)
+    }
+    
+    func setButtonState() {
+        nextButton.isEnabled = false
+        skipButton.setTitle("건너뛰기", for: .normal)
+    }
+    
+    func changeButtonState() {
+        // 데이터가 들어오면 불려야 한다.
+        if currentView == .peopleCountView {
+            nextButton.setTitle("검색", for: .normal)
+        }
+        nextButton.isEnabled = true
+        skipButton.setTitle("다음", for: .normal)
+    }
+    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        if sender.titleLabel!.text == "지우기" {
+            setButtonState()
+            // ViewMidel 해당 Data nil로 만들기
+            return
+        }
+        scrollView()
+    }
+}
+
+extension FindingAccommodationViewController {
+    enum CurrentView: Int {
+        case calendarView = 0, costGraphView, peopleCountView
+        
+        var nextState: Self {
+            switch self {
+            case .calendarView:
+                return .costGraphView
+            case .costGraphView:
+                return .peopleCountView
+            case .peopleCountView:
+                return .peopleCountView
+            }
+        }
     }
 }
