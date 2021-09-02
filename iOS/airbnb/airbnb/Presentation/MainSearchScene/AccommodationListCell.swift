@@ -17,4 +17,9 @@ class AccommodationListCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    }
 }
