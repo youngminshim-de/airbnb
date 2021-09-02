@@ -60,22 +60,21 @@ class FindingAccommodationViewController: UIViewController {
         return viewController
     }
     
-    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
     
     private func scrollView() {
         let totalWidth = findingAccommodationConditionView.contentSize.width
-//        let totalWidth = conditionStackView.frame.width
         let viewCount = CGFloat(conditionStackView.subviews.count)
-        currentView = currentView.nextState
-        
+
         if currentView == .peopleCountView {
-            // 숙소 리스트 뷰컨트롤러 이동
-            // coordinator.pushViewController
+            coordinator?.pushAccommodationListCollectionViewController()
         }
+        
         setButtonState()
-        self.findingAccommodationConditionView.setContentOffset(CGPoint(x: Int(totalWidth / viewCount) * currentView.rawValue, y: 0), animated: true)
+        self.findingAccommodationConditionView.setContentOffset(CGPoint(x: Int(totalWidth / viewCount) * currentView.nextState.rawValue, y: 0), animated: true)
+        currentView = currentView.nextState
     }
     
     func setButtonState() {

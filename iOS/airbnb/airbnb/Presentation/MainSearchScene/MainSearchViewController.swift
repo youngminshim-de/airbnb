@@ -53,7 +53,7 @@ class MainSearchViewController: UIViewController{
         return viewController
     }
     
-    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
 }

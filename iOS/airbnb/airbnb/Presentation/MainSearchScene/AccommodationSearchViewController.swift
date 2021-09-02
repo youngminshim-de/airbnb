@@ -62,7 +62,7 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
         return headerView
     }
     
-    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
 }
