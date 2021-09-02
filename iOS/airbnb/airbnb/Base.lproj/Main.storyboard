@@ -1088,7 +1088,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dcB-HX-RU2">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AccommodationListCell" id="dcB-HX-RU2" customClass="AccommodationListCell" customModule="airbnb" customModuleProvider="target">
                                 <rect key="frame" x="0.66666666666666663" y="130" width="427" height="424"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3xb-4T-9GK">
@@ -1162,9 +1162,17 @@
                                         <constraint firstItem="rSM-c3-keA" firstAttribute="leading" secondItem="1ey-4M-Kz4" secondAttribute="leading" id="xce-uH-gLU"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="accommodationImageView" destination="rBm-GD-bkR" id="hNL-vv-qya"/>
+                                    <outlet property="accommodationNameLabel" destination="wex-Qd-2yZ" id="1Qg-g1-eNM"/>
+                                    <outlet property="averageScoreLabel" destination="yfk-LR-LnR" id="89E-Ji-wfZ"/>
+                                    <outlet property="priceLabel" destination="1ey-4M-Kz4" id="c9N-Il-T9d"/>
+                                    <outlet property="reviewCountLabel" destination="o1Z-Pj-91z" id="Lhm-UE-O17"/>
+                                    <outlet property="totalPriceLabel" destination="rSM-c3-keA" id="AnZ-4o-heP"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="L5e-4g-sYi">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AccommodationListHeader" id="L5e-4g-sYi" customClass="AccommodationListCell" customModule="airbnb" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="428" height="130"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1193,6 +1201,10 @@
                                 <constraint firstItem="b2h-gS-Srh" firstAttribute="top" secondItem="7bq-z5-Ljb" secondAttribute="bottom" constant="8" id="phd-gX-LYV"/>
                                 <constraint firstItem="7bq-z5-Ljb" firstAttribute="leading" secondItem="L5e-4g-sYi" secondAttribute="leading" constant="16" id="pq0-w7-KKb"/>
                             </constraints>
+                            <connections>
+                                <outlet property="headerFilterLabel" destination="7bq-z5-Ljb" id="TdO-Pk-BXJ"/>
+                                <outlet property="headerTitleLabel" destination="b2h-gS-Srh" id="bt8-yS-7Gb"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="pYf-0a-m23" id="YEM-c6-OuY"/>
