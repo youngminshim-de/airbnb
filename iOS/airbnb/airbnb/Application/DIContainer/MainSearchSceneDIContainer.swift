@@ -58,7 +58,7 @@ extension MainSearchSceneDIContainer {
 }
 
 extension MainSearchSceneDIContainer {
-    func makeAccommodationListCollectionViewController() -> AccommodationListCollectionViewController {
-        return AccommodationListCollectionViewController.create()
+    func makeAccommodationListCollectionViewController() -> AccommodationListViewController {
+        return AccommodationListViewController.create()
     }
 }

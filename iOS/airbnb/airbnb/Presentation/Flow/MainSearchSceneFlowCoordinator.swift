@@ -13,7 +13,7 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeSignInViewController() -> SignInViewController
     func makeAccommodationSearchViewController() -> AccommodationSearchViewController
     func makeFindingAccommodationViewController() -> FindingAccommodationViewController
-    func makeAccommodationListCollectionViewController() -> AccommodationListCollectionViewController
+    func makeAccommodationListCollectionViewController() -> AccommodationListViewController
 }
 
 class MainSearchSceneFlowCoordinator: Coordinator {
