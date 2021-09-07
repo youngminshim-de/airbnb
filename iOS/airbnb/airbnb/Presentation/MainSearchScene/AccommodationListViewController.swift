@@ -37,8 +37,7 @@ class AccommodationListViewController: UIViewController {
     func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
-    @IBAction func wishListButtonTouched(_ sender: UIButton) {
-    }
+
     @IBAction func mapButtonTouched(_ sender: UIButton) {
     }
     
@@ -51,6 +50,7 @@ extension AccommodationListViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AccommodationListCell", for: indexPath) as? AccommodationListCell else {
                 return AccommodationListCell()
             }
+            cell.configureCell()
             return cell
         }
         

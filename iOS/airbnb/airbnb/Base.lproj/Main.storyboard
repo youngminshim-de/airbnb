@@ -1151,7 +1151,7 @@
                                                     <rect key="frame" x="372" y="16" width="24" height="24"/>
                                                     <state key="normal" image="wishlist"/>
                                                     <connections>
-                                                        <action selector="wishListButtonTouched:" destination="LUs-hq-yiz" eventType="touchUpInside" id="sEG-rE-zHA"/>
+                                                        <action selector="wishListButtonTouched:" destination="gXj-Y9-jc0" eventType="touchUpInside" id="bqU-26-ckc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1185,6 +1185,7 @@
                                             <outlet property="priceLabel" destination="rIf-IP-Kaw" id="T0I-zV-PXr"/>
                                             <outlet property="reviewCountLabel" destination="RPw-JB-uCS" id="utR-Qc-ST4"/>
                                             <outlet property="totalPriceLabel" destination="y9s-l0-vcR" id="wWS-9h-rb7"/>
+                                            <outlet property="wishListButton" destination="jwC-oj-2oC" id="oUv-9N-ANK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
