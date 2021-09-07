@@ -13,6 +13,7 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeSignInViewController() -> SignInViewController
     func makeAccommodationSearchViewController() -> AccommodationSearchViewController
     func makeFindingAccommodationViewController() -> FindingAccommodationViewController
+    func makeAccommodationListCollectionViewController() -> AccommodationListViewController
 }
 
 class MainSearchSceneFlowCoordinator: Coordinator {
@@ -32,7 +33,7 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     
     func pushAccomodationSearchViewController() {
         let accommodationSerachViewContoller = dependencies.makeAccommodationSearchViewController()
-        accommodationSerachViewContoller.injectionCoordinator(coordinator: self)
+        accommodationSerachViewContoller.injectionCoordinator(with: self)
         guard let rootViewController = rootViewController as? UINavigationController else {
             return
         }
@@ -52,17 +53,26 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     
     func pushFindingAccommodationViewController() {
         let findingAccommodationViewController = dependencies.makeFindingAccommodationViewController()
-        findingAccommodationViewController.injectionCoordinator(coordinator: self)
+        findingAccommodationViewController.injectionCoordinator(with: self)
         guard let rootViewController = rootViewController as? UINavigationController else {
             return
         }
         rootViewController.pushViewController(findingAccommodationViewController, animated: true)
     }
     
+    func pushAccommodationListCollectionViewController() {
+        let accommodationListCollectionViewController = dependencies.makeAccommodationListCollectionViewController()
+        accommodationListCollectionViewController.injectionCoordinator(with: self)
+        guard let rootViewController = rootViewController as? UINavigationController else {
+            return
+        }
+        rootViewController.pushViewController(accommodationListCollectionViewController, animated: true)
+    }
+    
     func start() {
         let mainSearchViewController = dependencies.makeMainSearchViewController()
         self.rootViewController = UINavigationController(rootViewController: mainSearchViewController)
-        mainSearchViewController.injectionCoordinator(coordinator: self)
+        mainSearchViewController.injectionCoordinator(with: self)
         self.rootViewController.tabBarItem = UITabBarItem(title: "검색", image: UIImage(named: "search.png"), tag: 0)
     }
 }
