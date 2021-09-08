@@ -479,7 +479,7 @@
         <!--View Controller-->
         <scene sceneID="Ll7-Dk-KN8">
             <objects>
-                <viewController id="LwX-4t-UNN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccommodationDetailViewController" id="LwX-4t-UNN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3W-rU-qpp">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -788,7 +788,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKO-qx-hXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955.6074766355139" y="771.70626349892018"/>
+            <point key="canvasLocation" x="5258" y="483"/>
         </scene>
         <!--숙소찾기-->
         <scene sceneID="wYD-dW-8mI">

@@ -21,6 +21,7 @@
 		D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */; };
 		D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */; };
 		D4B17B1B26E7314300C9359D /* AccommodationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */; };
+		D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */; };
 		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
 		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
@@ -87,6 +88,7 @@
 		D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListViewController.swift; sourceTree = "<group>"; };
+		D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailViewController.swift; sourceTree = "<group>"; };
 		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */,
 				D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */,
 				D4B67D4026C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift */,
+				D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */,
 				D4B67D4226C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift */,
 				D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */,
 				D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */,
@@ -615,6 +618,7 @@
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
 				D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */,
 				D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */,
+				D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */,
 				D4BCFB9426D671E800323CF5 /* DIYCalendarCell.swift in Sources */,
 				D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */,
 				D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */,
