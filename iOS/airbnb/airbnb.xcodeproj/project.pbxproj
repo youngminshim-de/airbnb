@@ -22,6 +22,7 @@
 		D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */; };
 		D4B17B1B26E7314300C9359D /* AccommodationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */; };
 		D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */; };
+		D4B17B2526E8F37500C9359D /* AccommodationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */; };
 		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
 		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
@@ -89,6 +90,7 @@
 		D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListViewController.swift; sourceTree = "<group>"; };
 		D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailViewController.swift; sourceTree = "<group>"; };
+		D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailView.swift; sourceTree = "<group>"; };
 		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */,
 				D472A17226E0B3F600B564AE /* AccommodationListCell.swift */,
 				D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */,
+				D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */,
 				D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */,
 				D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */,
 				D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */,
@@ -598,6 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B17B2526E8F37500C9359D /* AccommodationDetailView.swift in Sources */,
 				D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */,
 				D4BCFB7B26D3AB4100323CF5 /* FindingAccommodationViewController.swift in Sources */,
 				D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */,

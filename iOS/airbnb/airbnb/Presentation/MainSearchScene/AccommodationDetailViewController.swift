@@ -10,9 +10,12 @@ import UIKit
 class AccommodationDetailViewController: UIViewController {
     
     weak var coordinator: MainSearchSceneFlowCoordinator?
+    @IBOutlet weak var accommodationImageStackView: UIStackView!
+    @IBOutlet weak var accommodationDetailView: AccommodationDetailView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAccommodationDetailViewController()
     }
     
     static func create() -> AccommodationDetailViewController {
@@ -22,6 +25,11 @@ class AccommodationDetailViewController: UIViewController {
             return AccommodationDetailViewController()
         }
         return viewController
+    }
+    
+    private func setupAccommodationDetailViewController() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {

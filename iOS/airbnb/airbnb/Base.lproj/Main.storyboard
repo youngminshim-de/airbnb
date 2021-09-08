@@ -190,10 +190,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="434" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-L0-BI4" userLabel="BannerView">
-                                                <rect key="frame" x="0.0" y="716" width="434" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="112" width="434" height="461"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-G8-f6B">
-                                                        <rect key="frame" x="0.0" y="-112" width="434" height="112"/>
+                                                        <rect key="frame" x="0.0" y="-112" width="434" height="573"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-fM-wgi">
                                                         <rect key="frame" x="16" y="23.999999999999993" width="125" height="81.333333333333314"/>
@@ -204,13 +204,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에어비앤비가 엄선한 위시리스트를 만나보세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2q-2W-fkC">
-                                                        <rect key="frame" x="16" y="121.33333333333336" width="312" height="20.333333333333329"/>
+                                                        <rect key="frame" x="16" y="121.33333333333333" width="312" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdi-YE-0Ut">
-                                                        <rect key="frame" x="16" y="157.66666666666663" width="144" height="34"/>
+                                                        <rect key="frame" x="16" y="157.66666666666669" width="144" height="34"/>
                                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                                         <state key="normal" title="여행 아이디어 얻기">
@@ -476,10 +476,10 @@
             </objects>
             <point key="canvasLocation" x="1957.0093457943924" y="64.794816414686835"/>
         </scene>
-        <!--View Controller-->
+        <!--Accommodation Detail View Controller-->
         <scene sceneID="Ll7-Dk-KN8">
             <objects>
-                <viewController storyboardIdentifier="AccommodationDetailViewController" id="LwX-4t-UNN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccommodationDetailViewController" id="LwX-4t-UNN" customClass="AccommodationDetailViewController" customModule="airbnb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3W-rU-qpp">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +523,7 @@
                                                 <viewLayoutGuide key="contentLayoutGuide" id="55P-Eu-Wrm"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="Vtz-VQ-5MW"/>
                                             </scrollView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-ml-U3N">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-ml-U3N" customClass="AccommodationDetailView" customModule="airbnb" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="351" width="428" height="1149"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frl-JC-jg5">
@@ -647,6 +647,15 @@
                                                     <constraint firstItem="PP8-Ff-Z2c" firstAttribute="top" secondItem="frl-JC-jg5" secondAttribute="bottom" constant="10" id="xhe-G3-AEX"/>
                                                     <constraint firstItem="aCd-43-gvA" firstAttribute="leading" secondItem="HLX-3A-Vgf" secondAttribute="leading" id="y4P-O6-SF8"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="accommodationNameLabel" destination="frl-JC-jg5" id="JiQ-hG-E2J"/>
+                                                    <outlet property="addressLabel" destination="bcs-vS-OYz" id="vcj-zf-FFY"/>
+                                                    <outlet property="averageScoreLabel" destination="FRs-pe-wcR" id="21Y-m5-7RU"/>
+                                                    <outlet property="dateLabel" destination="9tV-n0-9vf" id="m9Z-HI-yen"/>
+                                                    <outlet property="descriptionLabel" destination="aCd-43-gvA" id="eba-VV-1qU"/>
+                                                    <outlet property="priceLabel" destination="G0m-xk-eRM" id="R3v-4K-C7S"/>
+                                                    <outlet property="reviewCountLabel" destination="39G-Rp-Qhd" id="cbm-5G-StZ"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -785,6 +794,10 @@
                             <constraint firstItem="9bp-BZ-o54" firstAttribute="trailing" secondItem="sSl-fj-09I" secondAttribute="leading" constant="-10" id="qzy-KX-5bm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accommodationDetailView" destination="yy7-ml-U3N" id="gT1-G6-4CI"/>
+                        <outlet property="accommodationImageStackView" destination="TTU-R1-G8a" id="LhH-cd-ssM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKO-qx-hXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1538,7 +1551,6 @@
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
-                                    <outlet property="dataSource" destination="LUs-hq-yiz" id="LB1-UY-Wd5"/>
                                     <outlet property="delegate" destination="LUs-hq-yiz" id="7ic-Vo-eLV"/>
                                 </connections>
                             </collectionView>
