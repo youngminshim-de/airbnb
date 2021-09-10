@@ -190,10 +190,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="434" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-L0-BI4" userLabel="BannerView">
-                                                <rect key="frame" x="0.0" y="716" width="434" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="112" width="434" height="461"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-G8-f6B">
-                                                        <rect key="frame" x="0.0" y="-112" width="434" height="112"/>
+                                                        <rect key="frame" x="0.0" y="-112" width="434" height="573"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-fM-wgi">
                                                         <rect key="frame" x="16" y="23.999999999999993" width="125" height="81.333333333333314"/>
@@ -204,13 +204,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에어비앤비가 엄선한 위시리스트를 만나보세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2q-2W-fkC">
-                                                        <rect key="frame" x="16" y="121.33333333333336" width="312" height="20.333333333333329"/>
+                                                        <rect key="frame" x="16" y="121.33333333333333" width="312" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdi-YE-0Ut">
-                                                        <rect key="frame" x="16" y="157.66666666666663" width="144" height="34"/>
+                                                        <rect key="frame" x="16" y="157.66666666666669" width="144" height="34"/>
                                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                                         <state key="normal" title="여행 아이디어 얻기">
@@ -511,6 +511,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="d2W-tg-DL0" firstAttribute="trailing" secondItem="55P-Eu-Wrm" secondAttribute="trailing" id="G96-5C-ZXK"/>
+                                                    <constraint firstItem="d2W-tg-DL0" firstAttribute="bottom" secondItem="55P-Eu-Wrm" secondAttribute="bottom" id="Q8h-4Z-HAa"/>
                                                     <constraint firstItem="d2W-tg-DL0" firstAttribute="height" secondItem="Vtz-VQ-5MW" secondAttribute="height" id="kUu-um-ZA3"/>
                                                     <constraint firstItem="d2W-tg-DL0" firstAttribute="leading" secondItem="55P-Eu-Wrm" secondAttribute="leading" id="kwk-j0-2lh"/>
                                                 </constraints>
@@ -686,7 +687,7 @@
                                     <constraint firstAttribute="height" constant="112" id="LCR-bc-237"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-tk-Yez">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-tk-Yez" userLabel="backButton">
                                 <rect key="frame" x="16" y="60" width="44" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -699,7 +700,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-BZ-o54">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-BZ-o54" userLabel="shareButton">
                                 <rect key="frame" x="314" y="60" width="44" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -711,8 +712,11 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareButtonTouched:" destination="LwX-4t-UNN" eventType="touchUpInside" id="aYv-dk-r4w"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-fj-09I">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-fj-09I" userLabel="wishListButton">
                                 <rect key="frame" x="368" y="60" width="44" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
