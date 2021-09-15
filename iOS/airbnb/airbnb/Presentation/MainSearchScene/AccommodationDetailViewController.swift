@@ -54,10 +54,11 @@ class AccommodationDetailViewController: UIViewController {
     func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
+    
     @IBAction func shareButtonTouched(_ sender: UIButton) {
         shareURL = URL(string: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkO2H7%2Fbtqz7KIU5pu%2FspCicSk0r44I5i5Fu7mRt1%2Fimg.jpg")
         let activityViewController = UIActivityViewController(activityItems: [self], applicationActivities: nil)
-//        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [.copyToPasteboard, .saveToCameraRoll, .assignToContact, .print, .mail]
         self.present(activityViewController, animated: true, completion: nil)
     }
 }
@@ -109,7 +110,6 @@ extension AccommodationDetailViewController: UIActivityItemSource {
 extension AccommodationDetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        307 - 224 = 83
         let topHeaderViewHeight: CGFloat = 112
         let scrollViewOffset = 307 - (topHeaderViewHeight*2) // 83
         print(scrollView.contentOffset.y)
