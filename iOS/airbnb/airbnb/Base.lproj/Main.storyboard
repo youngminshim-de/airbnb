@@ -783,6 +783,9 @@
                                                     <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="reservationButtonTouched:" destination="LwX-4t-UNN" eventType="touchUpInside" id="KC2-Yk-Pnt"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                 </items>
@@ -829,7 +832,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq1-jg-2ea">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq1-jg-2ea">
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -1075,9 +1078,11 @@
                     </view>
                     <connections>
                         <outlet property="checkInLabel" destination="sAD-SR-jyY" id="iZj-AT-qFh"/>
+                        <outlet property="checkInView" destination="I5P-or-Ezx" id="43y-48-KrS"/>
                         <outlet property="checkOutLabel" destination="jSd-yd-Caq" id="xEQ-ZR-cJO"/>
                         <outlet property="cleaningFeeLabel" destination="9Hw-en-PbP" id="Tes-OO-ZB0"/>
                         <outlet property="guestCountLabel" destination="gRj-wg-xOE" id="cKq-fW-9p6"/>
+                        <outlet property="guestCountView" destination="CaK-Ak-Nl4" id="5hB-Gk-ibj"/>
                         <outlet property="middlePriceLabel" destination="Enn-v9-Ygv" id="TVX-wh-1kD"/>
                         <outlet property="priceAndNightsLabel" destination="Ud1-kf-62G" id="hmm-lE-ciT"/>
                         <outlet property="priceLabel" destination="yl0-i2-Ces" id="KLx-To-EnV"/>

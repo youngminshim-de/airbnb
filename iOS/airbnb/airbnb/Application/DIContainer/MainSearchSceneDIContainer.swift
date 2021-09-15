@@ -68,3 +68,9 @@ extension MainSearchSceneDIContainer {
         return AccommodationDetailViewController.create()
     }
 }
+
+extension MainSearchSceneDIContainer {
+    func makeReservationViewController() -> ReservationViewController {
+        return ReservationViewController.create()
+    }
+}

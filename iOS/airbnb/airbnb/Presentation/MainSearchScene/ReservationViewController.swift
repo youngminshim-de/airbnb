@@ -8,6 +8,8 @@
 import UIKit
 
 class ReservationViewController: UIViewController {
+    @IBOutlet weak var checkInView: UIView!
+    @IBOutlet weak var guestCountView: UIView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var checkInLabel: UILabel!
     @IBOutlet weak var checkOutLabel: UILabel!
@@ -19,11 +21,14 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
+    weak var coordinator: MainSearchSceneFlowCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func reservationButtonTouched(_ sender: UIButton) {
+        
     }
     
     static func create() -> ReservationViewController {
@@ -32,5 +37,9 @@ class ReservationViewController: UIViewController {
             return ReservationViewController()
         }
         return viewController
+    }
+    
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
+        self.coordinator = coordinator
     }
 }

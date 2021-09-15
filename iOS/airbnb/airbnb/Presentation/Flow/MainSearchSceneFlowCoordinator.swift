@@ -15,6 +15,7 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeFindingAccommodationViewController() -> FindingAccommodationViewController
     func makeAccommodationListCollectionViewController() -> AccommodationListViewController
     func makeAccommodationDetailViewController() -> AccommodationDetailViewController
+    func makeReservationViewController() -> ReservationViewController
 }
 
 class MainSearchSceneFlowCoordinator: Coordinator {
@@ -77,6 +78,17 @@ class MainSearchSceneFlowCoordinator: Coordinator {
             return
         }
         rootViewController.pushViewController(accommodationDetailViewController, animated: true)
+    }
+    
+    func pushReservationViewController() {
+        let reservationViewController = dependencies.makeReservationViewController()
+        reservationViewController.injectionCoordinator(with: self)
+        rootViewController.present(reservationViewController, animated: true, completion: nil)
+        rootViewController.modalPresentationStyle = .popover
+//        guard let rootViewController = rootViewController as? UINavigationController else {
+//            return
+//        }
+//        rootViewController.pushViewController(reservationViewController, animated: true)
     }
     
     func start() {
