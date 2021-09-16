@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		675F213C644D9423739D5A15 /* Pods_airbnbTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31FF69B95E1A6BBA1086735 /* Pods_airbnbTests.framework */; };
 		6EB0D0BA850193C0496DFF97 /* Pods_airbnb_airbnbUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */; };
+		D400F3E426F1DFE900D6E0FB /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F3E326F1DFE900D6E0FB /* ReservationViewController.swift */; };
 		D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F126B260AA0034DF4A /* AppDelegate.swift */; };
 		D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F326B260AA0034DF4A /* SceneDelegate.swift */; };
 		D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41483F526B260AA0034DF4A /* SignInViewController.swift */; };
@@ -21,6 +22,8 @@
 		D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */; };
 		D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */; };
 		D4B17B1B26E7314300C9359D /* AccommodationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */; };
+		D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */; };
+		D4B17B2526E8F37500C9359D /* AccommodationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */; };
 		D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */; };
 		D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */; };
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
@@ -41,6 +44,7 @@
 		D4BCFB9026D6240500323CF5 /* ReservationConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */; };
 		D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */; };
 		D4BCFB9426D671E800323CF5 /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCFB9326D671E800323CF5 /* DIYCalendarCell.swift */; };
+		D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */; };
 		E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC2802BA0E34BBE5C5450A6 /* Pods_airbnb.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,7 @@
 		B31FF69B95E1A6BBA1086735 /* Pods_airbnbTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnbTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B592F32A3259974412B61961 /* Pods-airbnb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb.debug.xcconfig"; path = "Target Support Files/Pods-airbnb/Pods-airbnb.debug.xcconfig"; sourceTree = "<group>"; };
 		BC86814AF98787EC9FB1C51F /* Pods-airbnbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnbTests.debug.xcconfig"; path = "Target Support Files/Pods-airbnbTests/Pods-airbnbTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D400F3E326F1DFE900D6E0FB /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		D41483EE26B260AA0034DF4A /* airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41483F126B260AA0034DF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D41483F326B260AA0034DF4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +92,8 @@
 		D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListViewController.swift; sourceTree = "<group>"; };
+		D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailViewController.swift; sourceTree = "<group>"; };
+		D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailView.swift; sourceTree = "<group>"; };
 		D4B67D2326C0F05A000E8BB7 /* MainSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 		D4B67D2626C0F1E5000E8BB7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 		D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditionCell.swift; sourceTree = "<group>"; };
 		D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditionViewDataSource.swift; sourceTree = "<group>"; };
 		D4BCFB9326D671E800323CF5 /* DIYCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		EDB3C694D00F5E4C863206B7 /* Pods-airbnb-airbnbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb-airbnbUITests.debug.xcconfig"; path = "Target Support Files/Pods-airbnb-airbnbUITests/Pods-airbnb-airbnbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnb_airbnbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,6 +185,7 @@
 		D41483F026B260AA0034DF4A /* airbnb */ = {
 			isa = PBXGroup;
 			children = (
+				D4ECDB0126EB4C84003D3C99 /* Extension */,
 				D414842826B2C6040034DF4A /* Application */,
 				D414842626B2C5E90034DF4A /* Domain */,
 				D414842526B2C5D90034DF4A /* Presentation */,
@@ -329,16 +338,27 @@
 				D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */,
 				D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */,
 				D4B67D4026C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift */,
+				D4B17B2226E8E07F00C9359D /* AccommodationDetailViewController.swift */,
 				D4B67D4226C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift */,
 				D4BCFB8F26D6240500323CF5 /* ReservationConditionCell.swift */,
 				D4B67D9826CA2590000E8BB7 /* AccommodationSearchViewController.swift */,
 				D472A17226E0B3F600B564AE /* AccommodationListCell.swift */,
 				D4B17B1A26E7314300C9359D /* AccommodationListViewController.swift */,
+				D4B17B2426E8F37500C9359D /* AccommodationDetailView.swift */,
 				D4B67D9C26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift */,
 				D4BCFB7A26D3AB4100323CF5 /* FindingAccommodationViewController.swift */,
 				D4BCFB9126D6264E00323CF5 /* ReservationConditionViewDataSource.swift */,
+				D400F3E326F1DFE900D6E0FB /* ReservationViewController.swift */,
 			);
 			path = MainSearchScene;
+			sourceTree = "<group>";
+		};
+		D4ECDB0126EB4C84003D3C99 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DFC11E529C668FD1ADCAB465 /* Frameworks */ = {
@@ -595,12 +615,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B17B2526E8F37500C9359D /* AccommodationDetailView.swift in Sources */,
 				D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */,
 				D4BCFB7B26D3AB4100323CF5 /* FindingAccommodationViewController.swift in Sources */,
 				D41483F226B260AA0034DF4A /* AppDelegate.swift in Sources */,
 				D4B67D2B26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift in Sources */,
+				D400F3E426F1DFE900D6E0FB /* ReservationViewController.swift in Sources */,
 				D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */,
 				D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */,
+				D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */,
 				D4B67D3026C0FC36000E8BB7 /* NetworkService.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
 				D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */,
@@ -615,6 +638,7 @@
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
 				D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */,
 				D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */,
+				D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */,
 				D4BCFB9426D671E800323CF5 /* DIYCalendarCell.swift in Sources */,
 				D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */,
 				D4B67D2426C0F05A000E8BB7 /* MainSearchViewController.swift in Sources */,

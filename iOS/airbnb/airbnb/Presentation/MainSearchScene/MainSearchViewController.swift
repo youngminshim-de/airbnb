@@ -62,7 +62,7 @@ extension MainSearchViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let constant: CGFloat = 112
         let scrollViewOffset = closedTripPlaceCollectionView.superview!.frame.minY - (constant*2)
-        
+
         if scrollView.contentOffset.y > scrollViewOffset {
             self.topHeaderView.alpha = 1
             if scrollView.contentOffset.y < constant + scrollViewOffset {

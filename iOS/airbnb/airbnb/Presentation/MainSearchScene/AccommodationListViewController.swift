@@ -20,6 +20,7 @@ class AccommodationListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applySnapshot()
+        self.accommodationListCollectionView.dataSource = dataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +78,12 @@ extension AccommodationListViewController {
         }
         
         dataSource.apply(snapshot, animatingDifferences: animatingDifference)
+    }
+}
+
+extension AccommodationListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.coordinator?.pushAccommodationDetailViewController()
     }
 }
 
