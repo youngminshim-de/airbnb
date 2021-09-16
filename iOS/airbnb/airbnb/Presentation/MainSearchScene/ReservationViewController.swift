@@ -25,6 +25,7 @@ class ReservationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupcheckInView()
     }
     
     @IBAction func reservationButtonTouched(_ sender: UIButton) {
@@ -41,5 +42,12 @@ class ReservationViewController: UIViewController {
     
     func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
+    }
+    
+    func setupcheckInView() {
+        checkInView.layer.borderWidth = 1
+        checkInView.layer.borderColor = UIColor.systemGray4.cgColor
+        guestCountView.layer.borderWidth = 1
+        guestCountView.layer.borderColor = UIColor.systemGray4.cgColor
     }
 }
