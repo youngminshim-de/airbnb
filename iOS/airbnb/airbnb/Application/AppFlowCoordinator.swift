@@ -20,7 +20,7 @@ protocol Coordinator {
 class AppFlowCoordinator: Coordinator {
     var rootViewController: UIViewController
     internal let appDIContainer: AppDIContainer
-    var childCoordinator: [Coordinator] = []
+    var childCoordinator: [ChildCoordinator] = []
     
     init(tabBarController: UITabBarController, appDIContainer: AppDIContainer) {
         self.rootViewController = tabBarController
@@ -31,6 +31,7 @@ class AppFlowCoordinator: Coordinator {
         let mainSearchSceneDIContainer = appDIContainer.makeMainSearchSceneDIContainer()
         let flow = mainSearchSceneDIContainer.makeMainSearchSceneFlowCoordinator(navigationController: UINavigationController())
         flow.start()
+        
         childCoordinator.append(flow)
         
         // 여기에 나머지 탭을 초기화한다.

@@ -61,9 +61,12 @@ class AccommodationDetailViewController: UIViewController {
         activityViewController.excludedActivityTypes = [.copyToPasteboard, .saveToCameraRoll, .assignToContact, .print, .mail]
         self.present(activityViewController, animated: true, completion: nil)
     }
+    @IBAction func backButtonTouched(_ sender: UIButton) {
+        coordinator?.popViewController()
+    }
     
     @IBAction func reservationButtonTouched(_ sender: UIButton) {
-        coordinator?.pushReservationViewController()
+        coordinator?.presentReservationViewController()
     }
 }
 

@@ -18,8 +18,8 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeReservationViewController() -> ReservationViewController
 }
 
-class MainSearchSceneFlowCoordinator: Coordinator {
-    var rootViewController: UIViewController
+class MainSearchSceneFlowCoordinator: ChildCoordinator {
+    var rootViewController: UINavigationController
     private let dependencies: MainSearchSceneFlowCoordinatorDependencies
     
     init(navigationController: UINavigationController, dependencies: MainSearchSceneFlowCoordinatorDependencies) {
@@ -36,17 +36,7 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     func pushAccomodationSearchViewController() {
         let accommodationSerachViewContoller = dependencies.makeAccommodationSearchViewController()
         accommodationSerachViewContoller.injectionCoordinator(with: self)
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
         rootViewController.pushViewController(accommodationSerachViewContoller, animated: true)
-    }
-    
-    func popAccomodationSearchViewController() {
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
-        rootViewController.popViewController(animated: true)
     }
     
     func dismissSignInViewController(_ viewController: UIViewController) {
@@ -56,39 +46,30 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     func pushFindingAccommodationViewController() {
         let findingAccommodationViewController = dependencies.makeFindingAccommodationViewController()
         findingAccommodationViewController.injectionCoordinator(with: self)
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
         rootViewController.pushViewController(findingAccommodationViewController, animated: true)
     }
     
     func pushAccommodationListCollectionViewController() {
         let accommodationListCollectionViewController = dependencies.makeAccommodationListCollectionViewController()
         accommodationListCollectionViewController.injectionCoordinator(with: self)
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
         rootViewController.pushViewController(accommodationListCollectionViewController, animated: true)
     }
     
     func pushAccommodationDetailViewController() {
         let accommodationDetailViewController = dependencies.makeAccommodationDetailViewController()
         accommodationDetailViewController.injectionCoordinator(with: self)
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
         rootViewController.pushViewController(accommodationDetailViewController, animated: true)
     }
     
-    func pushReservationViewController() {
+    func presentReservationViewController() {
         let reservationViewController = dependencies.makeReservationViewController()
         reservationViewController.injectionCoordinator(with: self)
+        reservationViewController.modalPresentationStyle = .overCurrentContext
         rootViewController.present(reservationViewController, animated: true, completion: nil)
-        rootViewController.modalPresentationStyle = .popover
-//        guard let rootViewController = rootViewController as? UINavigationController else {
-//            return
-//        }
-//        rootViewController.pushViewController(reservationViewController, animated: true)
+    }
+    
+    func popViewController() {
+        rootViewController.popViewController(animated: true)
     }
     
     func start() {

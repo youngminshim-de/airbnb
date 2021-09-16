@@ -29,7 +29,7 @@ class ReservationViewController: UIViewController {
     }
     
     @IBAction func reservationButtonTouched(_ sender: UIButton) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     static func create() -> ReservationViewController {
