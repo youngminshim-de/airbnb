@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AccommodationList: Decodable {
+struct AccommodationInformation: Decodable {
     var id: Int
     var title: String
     var images: [String]

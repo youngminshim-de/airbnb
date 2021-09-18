@@ -38,7 +38,7 @@ extension MainPageDTO {
         private let imageUrl: String
         
         func toDomain() -> Theme {
-            return .init(placeId: placeId, placeName: placeName, imageUrl: imageUrl)
+            return .init(themeId: placeId, themeName: placeName, imageUrl: imageUrl)
         }
     }
     
