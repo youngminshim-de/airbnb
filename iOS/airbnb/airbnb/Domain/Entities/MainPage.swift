@@ -8,17 +8,17 @@
 import Foundation
 
 struct MainPage: Decodable {
-    var nearbyPlaces: [nearbyPlace]
-    var themes: [theme]
+    var nearbyPlaces: [NearbyPlace]
+    var themes: [Theme]
 }
 
-struct nearbyPlace: Decodable {
+struct NearbyPlace: Decodable {
     var placeId: Int
     var placeName: String
     var imageUrl: String
 }
 
-struct theme: Decodable {
+struct Theme: Decodable {
     var placeId: Int
     var placeName: String
     var imageUrl: String
