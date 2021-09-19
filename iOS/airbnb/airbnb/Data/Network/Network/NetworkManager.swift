@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import Alamofire
 
-protocol NetworkService {
+protocol NetworkManager  {
     
 }
 
-class DefaultNetworkService: NetworkService {
+class MainNetworManager: NetworkManager {
+    private var manager: SessionProtocol
+    private var decoder: JSONDecoder
     
+    init(with manager: SessionProtocol, with decoder: JSONDecoder) {
+        self.manager = manager
+        self.decoder = decoder
+    }
 }

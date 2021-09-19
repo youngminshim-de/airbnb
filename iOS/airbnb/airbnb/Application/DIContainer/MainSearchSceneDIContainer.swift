@@ -10,7 +10,7 @@ import UIKit
 class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let apiNetworkService: NetworkService
+        let apiNetworkService: NetworkManager
     }
     
     private let dependencies: Dependencies

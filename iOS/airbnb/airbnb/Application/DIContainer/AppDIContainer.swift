@@ -8,7 +8,7 @@
 import Foundation
 
 class AppDIContainer {
-    var apiNetworkService = DefaultNetworkService()
+    var apiNetworkService = MainNetworManager()
     
     func makeMainSearchSceneDIContainer() -> MainSearchSceneDIContainer {
         let dependencies = MainSearchSceneDIContainer.Dependencies.init(apiNetworkService: apiNetworkService)
