@@ -12,12 +12,13 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
     weak var coordinator: MainSearchSceneFlowCoordinator?
     private var searchController: UISearchController!
     
-    private var suggestionController: SearchSuggestionTableViewContrllerTableViewController!
+    private var suggestionController: SearchSuggestionTableViewContrller!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSuggestionController()
         setupSearchController()
+        self.tableView.tableHeaderView = makeTableHeaderView()
     }
     
     static func create() -> AccommodationSearchViewController {
@@ -29,7 +30,7 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
     }
     
     func setupSuggestionController() {
-        self.suggestionController = SearchSuggestionTableViewContrllerTableViewController(style: .grouped)
+        self.suggestionController = SearchSuggestionTableViewContrller(style: .grouped)
     }
     
     func setupSearchController() {
@@ -45,7 +46,23 @@ class AccommodationSearchViewController: UITableViewController, UISearchBarDeleg
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+    func makeTableHeaderView() -> UIView {
+        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 78)))
+        let label = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 177, height: 22)))
+        headerView.addSubview(label)
+        label.text = "근처의 인기 여행지"
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 16).isActive = true
+//        label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 32).isActive = true
+        label.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -24).isActive = true
+        label.font = .boldSystemFont(ofSize: 17)
+        headerView.addSubview(label)
+        return headerView
+    }
+    
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
     }
 }
@@ -61,5 +78,9 @@ extension AccommodationSearchViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.pushFindingAccommodationViewController()
     }
 }

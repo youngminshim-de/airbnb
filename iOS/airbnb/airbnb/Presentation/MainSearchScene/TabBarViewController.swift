@@ -29,7 +29,7 @@ class TabBarViewController: UITabBarController {
         UITabBar.appearance().tintColor = .black
     }
     
-    func injectionCoordinator(coordinator: AppFlowCoordinator) {
+    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
         self.coordinator = coordinator
     }
     

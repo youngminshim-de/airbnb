@@ -12,10 +12,14 @@ protocol MainSearchSceneFlowCoordinatorDependencies {
     func makeMainSearchViewController() -> MainSearchViewController
     func makeSignInViewController() -> SignInViewController
     func makeAccommodationSearchViewController() -> AccommodationSearchViewController
+    func makeFindingAccommodationViewController() -> FindingAccommodationViewController
+    func makeAccommodationListCollectionViewController() -> AccommodationListViewController
+    func makeAccommodationDetailViewController() -> AccommodationDetailViewController
+    func makeReservationViewController() -> ReservationViewController
 }
 
-class MainSearchSceneFlowCoordinator: Coordinator {
-    var rootViewController: UIViewController
+class MainSearchSceneFlowCoordinator: ChildCoordinator {
+    var rootViewController: UINavigationController
     private let dependencies: MainSearchSceneFlowCoordinatorDependencies
     
     init(navigationController: UINavigationController, dependencies: MainSearchSceneFlowCoordinatorDependencies) {
@@ -31,28 +35,47 @@ class MainSearchSceneFlowCoordinator: Coordinator {
     
     func pushAccomodationSearchViewController() {
         let accommodationSerachViewContoller = dependencies.makeAccommodationSearchViewController()
-        accommodationSerachViewContoller.injectionCoordinator(coordinator: self)
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
+        accommodationSerachViewContoller.injectionCoordinator(with: self)
         rootViewController.pushViewController(accommodationSerachViewContoller, animated: true)
-    }
-    
-    func popAccomodationSearchViewController() {
-        guard let rootViewController = rootViewController as? UINavigationController else {
-            return
-        }
-        rootViewController.popViewController(animated: true)
     }
     
     func dismissSignInViewController(_ viewController: UIViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
     
+    func pushFindingAccommodationViewController() {
+        let findingAccommodationViewController = dependencies.makeFindingAccommodationViewController()
+        findingAccommodationViewController.injectionCoordinator(with: self)
+        rootViewController.pushViewController(findingAccommodationViewController, animated: true)
+    }
+    
+    func pushAccommodationListCollectionViewController() {
+        let accommodationListCollectionViewController = dependencies.makeAccommodationListCollectionViewController()
+        accommodationListCollectionViewController.injectionCoordinator(with: self)
+        rootViewController.pushViewController(accommodationListCollectionViewController, animated: true)
+    }
+    
+    func pushAccommodationDetailViewController() {
+        let accommodationDetailViewController = dependencies.makeAccommodationDetailViewController()
+        accommodationDetailViewController.injectionCoordinator(with: self)
+        rootViewController.pushViewController(accommodationDetailViewController, animated: true)
+    }
+    
+    func presentReservationViewController() {
+        let reservationViewController = dependencies.makeReservationViewController()
+        reservationViewController.injectionCoordinator(with: self)
+        reservationViewController.modalPresentationStyle = .overCurrentContext
+        rootViewController.present(reservationViewController, animated: true, completion: nil)
+    }
+    
+    func popViewController() {
+        rootViewController.popViewController(animated: true)
+    }
+    
     func start() {
         let mainSearchViewController = dependencies.makeMainSearchViewController()
         self.rootViewController = UINavigationController(rootViewController: mainSearchViewController)
-        mainSearchViewController.injectionCoordinator(coordinator: self)
+        mainSearchViewController.injectionCoordinator(with: self)
         self.rootViewController.tabBarItem = UITabBarItem(title: "검색", image: UIImage(named: "search.png"), tag: 0)
     }
 }

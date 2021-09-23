@@ -24,8 +24,12 @@ class MainSearchViewController: UIViewController{
         coordinator?.presentSignInViewController()
         self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
         self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
-//        self.navigationController?.navigationBar.isHidden = true
         self.searchBar.searchTextField.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -49,18 +53,8 @@ class MainSearchViewController: UIViewController{
         return viewController
     }
     
-    func injectionCoordinator(coordinator: MainSearchSceneFlowCoordinator) {
+    func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isHidden = false
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-//        coordinator?.presentSignInViewController()
-//        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -68,7 +62,7 @@ extension MainSearchViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let constant: CGFloat = 112
         let scrollViewOffset = closedTripPlaceCollectionView.superview!.frame.minY - (constant*2)
-        
+
         if scrollView.contentOffset.y > scrollViewOffset {
             self.topHeaderView.alpha = 1
             if scrollView.contentOffset.y < constant + scrollViewOffset {

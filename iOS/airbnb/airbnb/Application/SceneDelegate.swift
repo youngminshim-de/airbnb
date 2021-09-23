@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = tabBarController
         flowCoordinator = AppFlowCoordinator(tabBarController: tabBarController, appDIContainer: appDIContainer)
         flowCoordinator?.start()
-        tabBarController.injectionCoordinator(coordinator: flowCoordinator!)
+        tabBarController.injectionCoordinator(with: flowCoordinator!)
         tabBarController.test()
         window?.makeKeyAndVisible()
     }
