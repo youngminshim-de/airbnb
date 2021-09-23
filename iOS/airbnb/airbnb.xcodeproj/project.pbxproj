@@ -18,6 +18,10 @@
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414840926B260AD0034DF4A /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
+		D4480EFA26FAFE58004213BC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D4480EF926FAFE58004213BC /* RxCocoa */; };
+		D4480EFC26FAFE58004213BC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D4480EFB26FAFE58004213BC /* RxRelay */; };
+		D4480EFE26FAFE58004213BC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D4480EFD26FAFE58004213BC /* RxSwift */; };
+		D4480F0026FAFE58004213BC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = D4480EFF26FAFE58004213BC /* RxTest */; };
 		D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472A17226E0B3F600B564AE /* AccommodationListCell.swift */; };
 		D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */; };
 		D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */; };
@@ -29,7 +33,7 @@
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
 		D4B67D2B26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */; };
 		D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */; };
-		D4B67D3026C0FC36000E8BB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2F26C0FC36000E8BB7 /* NetworkManager.swift */; };
+		D4B67D3026C0FC36000E8BB7 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */; };
 		D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */; };
 		D4B67D3926C26AD5000E8BB7 /* ClosedTripPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */; };
 		D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */; };
@@ -52,6 +56,7 @@
 		D4E7194526F7293300461396 /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7194426F7293300461396 /* SessionProtocol.swift */; };
 		D4E7194826F7298900461396 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D4E7194726F7298900461396 /* Alamofire */; };
 		D4E7194A26F7391400461396 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7194926F7391400461396 /* Requestable.swift */; };
+		D4E7194C26F73BD700461396 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */; };
 		D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */; };
 		E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC2802BA0E34BBE5C5450A6 /* Pods_airbnb.framework */; };
 /* End PBXBuildFile section */
@@ -107,7 +112,7 @@
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneDIContainer.swift; sourceTree = "<group>"; };
 		D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneFlowCoordinator.swift; sourceTree = "<group>"; };
-		D4B67D2F26C0FC36000E8BB7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedTripPlaceCell.swift; sourceTree = "<group>"; };
 		D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTripPlaceCell.swift; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		D4C914ED26F5CD6800CD072C /* AccommodationInformationListDTO + Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccommodationInformationListDTO + Mapping.swift"; sourceTree = "<group>"; };
 		D4E7194426F7293300461396 /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
 		D4E7194926F7391400461396 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		EDB3C694D00F5E4C863206B7 /* Pods-airbnb-airbnbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb-airbnbUITests.debug.xcconfig"; path = "Target Support Files/Pods-airbnb-airbnbUITests/Pods-airbnb-airbnbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnb_airbnbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4480F0026FAFE58004213BC /* RxTest in Frameworks */,
+				D4480EFE26FAFE58004213BC /* RxSwift in Frameworks */,
+				D4480EFC26FAFE58004213BC /* RxRelay in Frameworks */,
 				D4E7194826F7298900461396 /* Alamofire in Frameworks */,
 				E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */,
+				D4480EFA26FAFE58004213BC /* RxCocoa in Frameworks */,
 				D4BCFB8826D4BA2500323CF5 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,9 +411,10 @@
 		D4E7194326F728DA00461396 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D4B67D2F26C0FC36000E8BB7 /* NetworkManager.swift */,
+				D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */,
 				D4E7194426F7293300461396 /* SessionProtocol.swift */,
 				D4E7194926F7391400461396 /* Requestable.swift */,
+				D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -447,6 +458,10 @@
 			packageProductDependencies = (
 				D4BCFB8726D4BA2500323CF5 /* FSCalendar */,
 				D4E7194726F7298900461396 /* Alamofire */,
+				D4480EF926FAFE58004213BC /* RxCocoa */,
+				D4480EFB26FAFE58004213BC /* RxRelay */,
+				D4480EFD26FAFE58004213BC /* RxSwift */,
+				D4480EFF26FAFE58004213BC /* RxTest */,
 			);
 			productName = airbnb;
 			productReference = D41483EE26B260AA0034DF4A /* airbnb.app */;
@@ -525,6 +540,7 @@
 			packageReferences = (
 				D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				D4E7194626F7298900461396 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = D41483EF26B260AA0034DF4A /* Products */;
 			projectDirPath = "";
@@ -682,7 +698,7 @@
 				D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */,
 				D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */,
 				D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */,
-				D4B67D3026C0FC36000E8BB7 /* NetworkManager.swift in Sources */,
+				D4B67D3026C0FC36000E8BB7 /* NetworkTask.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
 				D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */,
 				D4C914E626F5C7E000CD072C /* MainPageDTO + Mapping.swift in Sources */,
@@ -691,6 +707,7 @@
 				D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */,
 				D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */,
 				D4B17B1B26E7314300C9359D /* AccommodationListViewController.swift in Sources */,
+				D4E7194C26F73BD700461396 /* NetworkDispatcher.swift in Sources */,
 				D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */,
 				D4B67D4326C561B7000E8BB7 /* ClosedTripPlaceDataSource.swift in Sources */,
 				D4B67D2726C0F1E5000E8BB7 /* AppFlowCoordinator.swift in Sources */,
@@ -1049,6 +1066,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -1068,6 +1093,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D4480EF926FAFE58004213BC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D4480EFB26FAFE58004213BC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		D4480EFD26FAFE58004213BC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D4480EFF26FAFE58004213BC /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4480EF826FAFE58004213BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
 		D4BCFB8726D4BA2500323CF5 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4BCFB8626D4BA2500323CF5 /* XCRemoteSwiftPackageReference "FSCalendar" */;

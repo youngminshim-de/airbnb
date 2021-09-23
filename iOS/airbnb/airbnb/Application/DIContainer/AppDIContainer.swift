@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
 class AppDIContainer {
-    var apiNetworkService = MainNetworManager()
+    var apiNetworkService: NetworkTask<Requestable, Decodable> = NetworkTask(with: MainPageRequest(path: <#T##String#>, httpMethod: <#T##HTTPMethod#>, bodyParams: <#T##[String : Any]?#>, headers: <#T##[String : String]?#>), with: <#T##JSONDecoder#>, with: <#T##JSONDecoder.KeyDecodingStrategy#>)
     
     func makeMainSearchSceneDIContainer() -> MainSearchSceneDIContainer {
         let dependencies = MainSearchSceneDIContainer.Dependencies.init(apiNetworkService: apiNetworkService)
