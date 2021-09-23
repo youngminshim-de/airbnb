@@ -37,8 +37,8 @@ class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {
     func excuteOAuth(with type: LoginType, completion: @escaping (Result<User,Error>) -> Void) {
         var webAuthSession: ASWebAuthenticationSession?
         
-        let callbackUrlScheme = "issue-trackker"
-        let url = URL(string: "https://github.com/login/oauth/authorize?client_id=a29c360109b82f566f16")
+        let callbackUrlScheme = "airbnb"
+        let url = URL(string: "https://github.com/login/oauth/authorize?client_id=f0d4d37dcd0ecd6cd157")
         
         // github url
         // kakao url
@@ -55,17 +55,18 @@ class OAuthManager: NSObject, ASWebAuthenticationPresentationContextProviding {
             OAuthManager.code = tempString
 //            "http://52.78.45.48:8080/api/oauth/userinfo?code=qwkhegqhjwegqhjwge&type=kakao"
 //            "http://52.78.45.48:8080/api/oauth/userinfo?code=qwkhegqhjwegqhjwge&type=github"
-            let urlurl: URL = URL(string: "http://52.78.45.48:8080/git/login/ios?\(tempString)")!
+            let urlurl: URL = URL(string: "http://d31a-49-163-156-81.ngrok.io/api/oauth/userInfo?\(tempString)&type=github")!
             var request: URLRequest = URLRequest(url: urlurl)
-            request.httpMethod = "POST"
-            
+            request.httpMethod = "GET"
+
             URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let user = try? JSONDecoder().decode(User.self, from: data!) else {
                     return
                 }
-//                StorageManager.shared.deleteUser()
-                let _ = StorageManager.shared.createUser(user)
                 
+                StorageManager.shared.deleteUser()
+                let _ = StorageManager.shared.createUser(user)
+
                 if StorageManager.shared.readUser() != nil {
                     DispatchQueue.main.async {
                         completion(.success(user))
