@@ -10,7 +10,7 @@ import UIKit
 class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let apiNetworkService: NetworkManager
+        let apiNetworkService: Task<MainPageRequest, MainPageDTO>
     }
     
     private let dependencies: Dependencies
@@ -40,6 +40,9 @@ class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
 }
 
 extension MainSearchSceneDIContainer {
+    // 여기서 dependencies 즉 Task<맞는request, 맞는DTO> 주입해줘야 한다.
+    // 위에 FlowCoordinator 만드는 함수만 빼고는 다 똑같이 만들어줘야 한다.
+    // 그렇다면 ViewController를 만들때 create() 함수에 주입을 해줘야 할듯
     func makeSignInViewController() -> SignInViewController {
         return SignInViewController.create()
     }
