@@ -106,6 +106,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="githubButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LnZ-45-2aJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-qe-PB8">
                                 <rect key="frame" x="16" y="497.66666666666674" width="396" height="50"/>

@@ -17,6 +17,8 @@
 		D41483FB26B260AD0034DF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41483FA26B260AD0034DF4A /* Assets.xcassets */; };
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
+		D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */; };
+		D48FDAFF26DCF4E0003BCB0F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */; };
 		D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472A17226E0B3F600B564AE /* AccommodationListCell.swift */; };
 		D4ABB43926FCC37300ACEFBC /* FakeAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABB43826FCC37300ACEFBC /* FakeAF.swift */; };
 		D4ABB43B26FCC66D00ACEFBC /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
@@ -96,6 +98,8 @@
 		D414840F26B260AD0034DF4A /* airbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414841326B260AD0034DF4A /* airbnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbUITests.swift; sourceTree = "<group>"; };
 		D414841526B260AD0034DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
+		D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D472A17226E0B3F600B564AE /* AccommodationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListCell.swift; sourceTree = "<group>"; };
 		D4ABB43826FCC37300ACEFBC /* FakeAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAF.swift; sourceTree = "<group>"; };
 		D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
@@ -300,6 +304,9 @@
 			children = (
 				D4E7194326F728DA00461396 /* Network */,
 				D4C914E426F5C7B000CD072C /* DataMapping */,
+				D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */,
+				D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */,
+				D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -714,6 +721,8 @@
 				D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */,
 				D4B67D3026C0FC36000E8BB7 /* NetworkTask.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
+				D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */,
+				D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */,
 				D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */,
 				D4C914E626F5C7E000CD072C /* MainPageDTO + Mapping.swift in Sources */,
 				D4C914E326F5C6C100CD072C /* AccommodationInformationList.swift in Sources */,
