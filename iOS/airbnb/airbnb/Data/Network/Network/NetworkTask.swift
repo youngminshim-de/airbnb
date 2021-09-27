@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class Task<Input, Output>  {
-    func fetch(_ element: Input, _ dataType: Output, completion: @escaping ((Result<Data,AFError>) -> Void)) {
+    func fetch(_ element: Input, _ dataType: Output, completion: @escaping ((Result<Output,AFError>) -> Void)) {
         
     }
 }
