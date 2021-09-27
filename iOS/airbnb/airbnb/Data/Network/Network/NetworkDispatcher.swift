@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 
 protocol NetworkDispatcher {
-    func execute(request: Requestable, completion: @escaping (Result<Data, AFError>) -> Void)
+    func execute(request: Requestable, completion: @escaping (Result<Data, NetworkError>) -> Void)
 }
 
 class MainPageDispatcher: NetworkDispatcher {
@@ -21,7 +21,7 @@ class MainPageDispatcher: NetworkDispatcher {
         self.session = session
     }
     
-    func execute(request: Requestable, completion: @escaping (Result<Data, AFError>) -> Void) {
+    func execute(request: Requestable, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         
         guard let url = request.url() else {
             return
@@ -32,8 +32,8 @@ class MainPageDispatcher: NetworkDispatcher {
             .validate(statusCode: 200..<300)
             .responseData { response in
                 switch response.result {
-                case .failure(let error):
-                    completion(.failure(error))
+                case .failure(_):
+                    completion(.failure(NetworkError.invalidRequest))
                 case .success(let data):
                     completion(.success(data))
                 }

@@ -23,26 +23,30 @@ extension MainPageDTO {
         }
     }
     
-    func toDomain() -> [NearbyPlace] {
+    private func toDomainNearbyPlace() -> [NearbyPlace] {
         let places = nearbyPlaces.map{ nearbyPlaceDTO in
             nearbyPlaceDTO.toDomain()
         }
         return places
     }
+    
+    func toDomain() -> MainPage {
+        return .init(nearbyPlaces: toDomainNearbyPlace(), themes: toDomainTheme())
+    }
 }
 
 extension MainPageDTO {
     struct ThemeDTO: Decodable {
-        private let placeId: Int
-        private let placeName: String
+        private let themeId: Int
+        private let themeName: String
         private let imageUrl: String
         
         func toDomain() -> Theme {
-            return .init(themeId: placeId, themeName: placeName, imageUrl: imageUrl)
+            return .init(themeId: themeId, themeName: themeName, imageUrl: imageUrl)
         }
     }
     
-    func toDomain() -> [Theme] {
+    private func toDomainTheme() -> [Theme] {
         let theme = themes.map{ themeDTO in
             themeDTO.toDomain()
         }

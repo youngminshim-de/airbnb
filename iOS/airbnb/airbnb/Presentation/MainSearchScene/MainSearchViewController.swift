@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainSearchViewController: UIViewController{
 
@@ -15,6 +16,8 @@ class MainSearchViewController: UIViewController{
     @IBOutlet weak var topHeaderViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topHeaderView: UIView!
     
+    private var repository = DefaultMainPageRepository(with: NetworkTask(with: MainPageDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase))
+    private var mainpage: MainPage
     weak var coordinator: MainSearchSceneFlowCoordinator?
     private var closedTripPlaceDataSource: ClosedTripPlaceDataSource
     private var recommendTripPlaceDataSource: RecommendTripPlaceDataSource
@@ -25,6 +28,7 @@ class MainSearchViewController: UIViewController{
         self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
         self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
         self.searchBar.searchTextField.backgroundColor = .white
+        fetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,13 +39,26 @@ class MainSearchViewController: UIViewController{
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
         self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
+        self.mainpage = MainPage(nearbyPlaces: [], themes: [])
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
         self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
+        self.mainpage = MainPage(nearbyPlaces: [], themes: [])
         super.init(coder: coder)
+    }
+    
+    func fetch() {
+        repository.fetchMainPage(MainPageRequest(path: EndPoint.mockURL.description, httpMethod: .get, bodyParams: nil, headers: nil), MainPageDTO.self) { response in
+            switch response {
+            case .success(let data):
+                self.mainpage = data
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     // 필요한 ViewModel을 파라미터에 넘겨 ViewController를 초기화 해줘야 한다.

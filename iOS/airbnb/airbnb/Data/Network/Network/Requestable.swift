@@ -36,6 +36,7 @@ enum EndPoint: CustomStringConvertible {
     case mainURL
     case accommodationListURL
     case detailedAccommodationURL
+    case mockURL
     var description: String {
         switch self {
         case .mainURL:
@@ -44,6 +45,8 @@ enum EndPoint: CustomStringConvertible {
             return "url/api/accommodations"
         case .detailedAccommodationURL:
             return "url/api/"
+        case .mockURL:
+            return "https://dadff59e-9285-4889-83fa-945917b01911.mock.pstmn.io/api/main"
         }
     }
 }

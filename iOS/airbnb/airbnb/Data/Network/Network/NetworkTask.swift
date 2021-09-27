@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class Task<Input, Output>  {
-    func fetch(_ element: Input, _ dataType: Output, completion: @escaping ((Result<Output,AFError>) -> Void)) {
+    func fetch(_ request: Input, _ dataType: Output.Type, completion: @escaping ((Result<Output,NetworkError>) -> Void)) {
         
     }
 }
@@ -24,7 +24,7 @@ class NetworkTask<Input: Requestable, Output: Decodable>: Task<Input, Output> {
         self.decoder.keyDecodingStrategy = keyDecodingStrategy
     }
     
-    func fetch(_ request: Input, _ dataType: Output.Type, completion: @escaping ((Result<Output, AFError>) -> Void)) {
+    override func fetch(_ request: Input, _ dataType: Output.Type, completion: @escaping ((Result<Output, NetworkError>) -> Void)) {
         dispatcher.execute(request: request) { response in
             switch response {
             case .success(let data):
@@ -33,13 +33,47 @@ class NetworkTask<Input: Requestable, Output: Decodable>: Task<Input, Output> {
                     completion(.success(result))
                 } catch {
                     // decoding Error
-                    completion(.failure(AFError.createURLRequestFailed(error: error)))
+                    completion(.failure(NetworkError.failDecoding))
                 }
                 
-            case .failure(let error):
+            case .failure(_):
                 // Network request Error
-                print(error)
+                print(NetworkError.invalidRequest)
             }
+        }
+    }
+    
+//    override func fetch(_ request: Input, _ dataType: Output.Type, completion: @escaping ((Result<Output, NetworkError>) -> Void)) {
+//        dispatcher.execute(request: request) { response in
+//            switch response {
+//            case .success(let data):
+//                do {
+//                    let result = try self.decoder.decode(dataType.self, from: data)
+//                    completion(.success(result))
+//                } catch {
+//                    // decoding Error
+//                    completion(.failure(NetworkError.failDecoding))
+//                }
+//
+//            case .failure(let error):
+//                // Network request Error
+//                print(NetworkError.invalidRequest)
+//            }
+//        }
+//    }
+}
+
+enum NetworkError: Error, CustomStringConvertible {
+    case invalidURL, failDecoding, invalidRequest
+    
+    var description: String {
+        switch self {
+        case .invalidURL:
+            return "URL이 올바르지 않습니다."
+        case .failDecoding:
+            return "Decoding이 올바르지 않습니다."
+        case .invalidRequest:
+            return "네트워크 연결 상태를 확인하세요."
         }
     }
 }

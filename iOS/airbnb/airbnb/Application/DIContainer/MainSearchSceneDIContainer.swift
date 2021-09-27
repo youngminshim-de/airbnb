@@ -10,7 +10,7 @@ import UIKit
 class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let apiNetworkService: Task<MainPageRequest, MainPageDTO>
+        let networkTask: Task<MainPageRequest, MainPageDTO>
     }
     
     private let dependencies: Dependencies
