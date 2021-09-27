@@ -11,7 +11,10 @@ target 'airbnb' do
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
-
+pod 'FSCalendar'
+pod 'Alamofire'
+pod 'RxSwift'
+pod 'RxCocoa'
   target 'airbnbTests' do
     inherit! :search_paths
     # Pods for testing
