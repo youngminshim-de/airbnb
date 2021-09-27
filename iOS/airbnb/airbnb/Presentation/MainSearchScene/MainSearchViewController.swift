@@ -51,7 +51,7 @@ class MainSearchViewController: UIViewController{
     }
     
     func fetch() {
-        repository.fetchMainPage(MainPageRequest(path: EndPoint.mockURL.description, httpMethod: .get, bodyParams: nil, headers: nil), MainPageDTO.self) { response in
+        repository.fetchMainPage() { response in
             switch response {
             case .success(let data):
                 self.mainpage = data
