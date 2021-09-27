@@ -17,9 +17,9 @@
 		D41483FB26B260AD0034DF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41483FA26B260AD0034DF4A /* Assets.xcassets */; };
 		D41483FE26B260AD0034DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41483FC26B260AD0034DF4A /* LaunchScreen.storyboard */; };
 		D414841426B260AD0034DF4A /* airbnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414841326B260AD0034DF4A /* airbnbUITests.swift */; };
-		D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */; };
-		D48FDAFF26DCF4E0003BCB0F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */; };
 		D472A17326E0B3F600B564AE /* AccommodationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472A17226E0B3F600B564AE /* AccommodationListCell.swift */; };
+		D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */; };
+		D4ABB42A26FCA3D700ACEFBC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */; };
 		D4ABB43926FCC37300ACEFBC /* FakeAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABB43826FCC37300ACEFBC /* FakeAF.swift */; };
 		D4ABB43B26FCC66D00ACEFBC /* airbnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414840826B260AD0034DF4A /* airbnbTests.swift */; };
 		D4AF9E3C26DE06DA00E69A28 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */; };
@@ -32,7 +32,6 @@
 		D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */; };
 		D4B67D2B26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */; };
 		D4B67D2E26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */; };
-		D4B67D3026C0FC36000E8BB7 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */; };
 		D4B67D3426C10369000E8BB7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */; };
 		D4B67D3926C26AD5000E8BB7 /* ClosedTripPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */; };
 		D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */; };
@@ -55,6 +54,7 @@
 		D4E7194A26F7391400461396 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7194926F7391400461396 /* Requestable.swift */; };
 		D4E7194C26F73BD700461396 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */; };
 		D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */; };
+		D4EEF93727019368006A41DA /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EEF93627019368006A41DA /* NetworkTask.swift */; };
 		E13CB3CB0C08863EFED28AF4 /* Pods_airbnb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC2802BA0E34BBE5C5450A6 /* Pods_airbnb.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,9 +98,9 @@
 		D414840F26B260AD0034DF4A /* airbnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414841326B260AD0034DF4A /* airbnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbUITests.swift; sourceTree = "<group>"; };
 		D414841526B260AD0034DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D472A17226E0B3F600B564AE /* AccommodationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListCell.swift; sourceTree = "<group>"; };
 		D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		D472A17226E0B3F600B564AE /* AccommodationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationListCell.swift; sourceTree = "<group>"; };
 		D4ABB43826FCC37300ACEFBC /* FakeAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAF.swift; sourceTree = "<group>"; };
 		D4AF9E3B26DE06DA00E69A28 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		D4AF9E3D26DE06F100E69A28 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 		D4B67D2826C0F25F000E8BB7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		D4B67D2A26C0F287000E8BB7 /* MainSearchSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneDIContainer.swift; sourceTree = "<group>"; };
 		D4B67D2D26C0F33A000E8BB7 /* MainSearchSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchSceneFlowCoordinator.swift; sourceTree = "<group>"; };
-		D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D4B67D3326C10369000E8BB7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D4B67D3826C26AD5000E8BB7 /* ClosedTripPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedTripPlaceCell.swift; sourceTree = "<group>"; };
 		D4B67D3E26C56026000E8BB7 /* RecommendTripPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTripPlaceCell.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		D4E7194926F7391400461396 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		D4ECDB0226EB4C90003D3C99 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
+		D4EEF93627019368006A41DA /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		EDB3C694D00F5E4C863206B7 /* Pods-airbnb-airbnbUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airbnb-airbnbUITests.debug.xcconfig"; path = "Target Support Files/Pods-airbnb-airbnbUITests/Pods-airbnb-airbnbUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDA69D876881C51E071E17F /* Pods_airbnb_airbnbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airbnb_airbnbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -304,7 +304,6 @@
 			children = (
 				D4E7194326F728DA00461396 /* Network */,
 				D4C914E426F5C7B000CD072C /* DataMapping */,
-				D4B67D2F26C0FC36000E8BB7 /* NetworkService.swift */,
 				D48FDAFC26DCF382003BCB0F /* OAuthManager.swift */,
 				D48FDAFE26DCF4E0003BCB0F /* StorageManager.swift */,
 			);
@@ -409,7 +408,7 @@
 		D4E7194326F728DA00461396 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D4B67D2F26C0FC36000E8BB7 /* NetworkTask.swift */,
+				D4EEF93627019368006A41DA /* NetworkTask.swift */,
 				D4E7194426F7293300461396 /* SessionProtocol.swift */,
 				D4E7194926F7391400461396 /* Requestable.swift */,
 				D4E7194B26F73BD700461396 /* NetworkDispatcher.swift */,
@@ -709,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EEF93727019368006A41DA /* NetworkTask.swift in Sources */,
 				D4E7194A26F7391400461396 /* Requestable.swift in Sources */,
 				D4B17B2526E8F37500C9359D /* AccommodationDetailView.swift in Sources */,
 				D41483F626B260AA0034DF4A /* SignInViewController.swift in Sources */,
@@ -719,7 +719,6 @@
 				D4B67D2926C0F25F000E8BB7 /* AppDIContainer.swift in Sources */,
 				D4B67D9926CA2590000E8BB7 /* AccommodationSearchViewController.swift in Sources */,
 				D4ECDB0326EB4C90003D3C99 /* UIImage + Extension.swift in Sources */,
-				D4B67D3026C0FC36000E8BB7 /* NetworkTask.swift in Sources */,
 				D4B67D3F26C56026000E8BB7 /* RecommendTripPlaceCell.swift in Sources */,
 				D48FDAFD26DCF382003BCB0F /* OAuthManager.swift in Sources */,
 				D4B67D9D26CA2BD7000E8BB7 /* ClosedPopulationTripPlaceCellTableViewCell.swift in Sources */,
@@ -739,6 +738,7 @@
 				D4B67D4126C561AD000E8BB7 /* RecommendTripPlaceDataSource.swift in Sources */,
 				D41483F426B260AA0034DF4A /* SceneDelegate.swift in Sources */,
 				D4AF9E3E26DE06F100E69A28 /* RangeSliderTrackLayer.swift in Sources */,
+				D4ABB42A26FCA3D700ACEFBC /* StorageManager.swift in Sources */,
 				D4BCFB9226D6264E00323CF5 /* ReservationConditionViewDataSource.swift in Sources */,
 				D4B17B2326E8E07F00C9359D /* AccommodationDetailViewController.swift in Sources */,
 				D4BCFB9426D671E800323CF5 /* DIYCalendarCell.swift in Sources */,
