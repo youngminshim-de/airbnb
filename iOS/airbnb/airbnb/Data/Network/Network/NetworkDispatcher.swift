@@ -11,6 +11,7 @@ import RxSwift
 
 protocol NetworkDispatcher {
     func execute(request: Requestable, completion: @escaping (Result<Data, NetworkError>) -> Void)
+    func executeWithRxSwift(request: Requestable) -> Observable<Data>
 }
 
 class MainPageDispatcher: NetworkDispatcher {
@@ -38,5 +39,28 @@ class MainPageDispatcher: NetworkDispatcher {
                     completion(.success(data))
                 }
             }
+    }
+    
+    func executeWithRxSwift(request: Requestable) -> Observable<Data> {
+        return Observable.create { [weak self] observer in
+            guard let url = request.url() else {
+                observer.onError(NetworkError.invalidURL)
+                return Disposables.create()
+            }
+            
+            self?.session.request(url, method: request.httpMethod, parameters: request.bodyParams,
+                            encoding: URLEncoding.default, headers: nil, interceptor: nil, requestModifier: nil)
+                .validate(statusCode: 200..<300)
+                .responseData { response in
+                    switch response.result {
+                    case .failure(_):
+                        observer.onError(NetworkError.invalidRequest)
+                    case .success(let data):
+                        observer.onNext(data)
+                        observer.onCompleted()
+                    }
+                }
+            return Disposables.create()
+        }
     }
 }

@@ -37,6 +37,7 @@ class TabBarViewController: UITabBarController {
         var views: [UIViewController] = []
         coordinator.childCoordinator.forEach{
             views.append($0.rootViewController)
+            
         }
         self.viewControllers = views
     }

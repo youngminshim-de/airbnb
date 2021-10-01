@@ -6,27 +6,37 @@
 //
 
 import Foundation
+import RxSwift
 
 class MainPageViewModel {
     private let fetchMainPageUseCase: FetchMainPageUseCase
-    private (set) var nearbyPlaces: [NearbyPlace]
-    private (set) var themes: [Theme]
+    private (set) var disposableBag = DisposeBag()
     
-    init(_ fetchMainPageUseCase: FetchMainPageUseCase) {
+    var mainPage: Observable<MainPage> {
+        let eventer = PublishSubject<MainPage>()
+        fetchMainPageUseCase.executeWithRx()
+            .subscribe(onNext: { data in
+                eventer.onNext(data)
+            }, onError: { error in
+                eventer.onError(error)
+            })
+            .disposed(by: disposableBag)
+        return eventer
+    }
+    
+    init(with fetchMainPageUseCase: FetchMainPageUseCase) {
         self.fetchMainPageUseCase = fetchMainPageUseCase
-        self.nearbyPlaces = []
-        self.themes = []
     }
     
-    func fetchMainPage() {
-        fetchMainPageUseCase.execute { response in
-            switch response {
-            case .success(let mainPage):
-                self.nearbyPlaces = mainPage.nearbyPlaces
-                self.themes = mainPage.themes
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+//    func request() {
+//        fetchMainPageUseCase.execute { response in
+//            switch response {
+//            case .success(let mainPage):
+//                self.mainPage = mainPage
+//            case .failure(let error):
+//                self.errorMessage = "\(error)"
+//            }
+//        }
+//    }
+
 }
