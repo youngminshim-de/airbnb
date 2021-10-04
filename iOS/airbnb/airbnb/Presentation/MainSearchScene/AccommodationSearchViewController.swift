@@ -73,7 +73,7 @@ extension AccommodationSearchViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClosedPopulationTripPlaceCellTableViewCell", for: indexPath) as? ClosedPopulationTripPlaceCellTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ClosedPopulationTripPlaceCellTableViewCell.identifier, for: indexPath) as? ClosedPopulationTripPlaceCellTableViewCell else {
             return ClosedPopulationTripPlaceCellTableViewCell()
         }
         

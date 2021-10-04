@@ -10,7 +10,7 @@ import UIKit
 class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let apiNetworkService: Task<MainPageRequest, MainPageDTO>
+        let networkTask: Task<MainPageRequest, MainPageDTO>
     }
     
     private let dependencies: Dependencies
@@ -20,17 +20,23 @@ class MainSearchSceneDIContainer: MainSearchSceneFlowCoordinatorDependencies {
     }
     
     // MARK: - Repository
-    // 네트워크 포함
+    func makeMainPageRepository() -> MainPageRepository {
+        return MainPageRepository(with: dependencies.networkTask)
+    }
     
     // MARK: - Use Cases
-    // Repository 포함
+    func makeMainPageUseCases() -> FetchMainPageUseCase {
+        return FetchMainPageUseCase(with: makeMainPageRepository())
+    }
     
     // MARK: - ViewModel
-    // ViewModel초기화 할때 action이 포함
+    func makeMainPageViewModel() -> MainPageViewModel {
+        return MainPageViewModel(with: makeMainPageUseCases())
+    }
     
     // MARK: - ViewController
     func makeMainSearchViewController() -> MainSearchViewController {
-        return MainSearchViewController.create()
+        return MainSearchViewController.create(with: makeMainPageViewModel())
     }
     
     // MARK: - FlowCoordinator

@@ -8,5 +8,15 @@
 import UIKit
 
 class ClosedTripPlaceCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var placeNameLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
+    private (set) static var identifier = "ClosedTripPlaceCell"
+    
+    func configure(closedTrip: NearbyPlace) {
+        imageView.load(url: closedTrip.imageUrl)
+        placeNameLabel.text = closedTrip.placeName
+        distanceLabel.text = "10분 거리"
+    }
 }

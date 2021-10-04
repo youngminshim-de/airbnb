@@ -6,25 +6,27 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
+import RxDataSources
 
-class MainSearchViewController: UIViewController{
+class MainSearchViewController: UIViewController {
 
     @IBOutlet weak var closedTripPlaceCollectionView: UICollectionView!
     @IBOutlet weak var recommendTripPlaceCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var topHeaderViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topHeaderView: UIView!
-    
+
+    private var mainPageViewModel: MainPageViewModel?
     weak var coordinator: MainSearchSceneFlowCoordinator?
-    private var closedTripPlaceDataSource: ClosedTripPlaceDataSource
-    private var recommendTripPlaceDataSource: RecommendTripPlaceDataSource
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         coordinator?.presentSignInViewController()
-        self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
-        self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
         self.searchBar.searchTextField.backgroundColor = .white
+        bindmainPageViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,23 +35,35 @@ class MainSearchViewController: UIViewController{
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
-        self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
-        self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
         super.init(coder: coder)
     }
     
+    func bindmainPageViewModel() {
+        
+        mainPageViewModel?.mainPage.map{$0.nearbyPlaces}
+        .bind(to: closedTripPlaceCollectionView.rx.items(identifier: ClosedTripPlaceCell.identifier, cellType: ClosedTripPlaceCell.self)) { row, closedTrip, cell in
+            cell.configure(closedTrip: closedTrip)
+        }
+        .disposed(by: rx.disposeBag)
+
+        mainPageViewModel?.mainPage.map{$0.themes}
+        .bind(to: recommendTripPlaceCollectionView.rx.items(identifier: RecommendTripPlaceCell.identifier, cellType: RecommendTripPlaceCell.self)) { row, recommendTrip, cell in
+            cell.configure(recommendTrip: recommendTrip)
+        }
+        .disposed(by: rx.disposeBag)
+    }
+    
     // 필요한 ViewModel을 파라미터에 넘겨 ViewController를 초기화 해줘야 한다.
-    static func create() -> MainSearchViewController {
+    static func create(with mainPageViewModel: MainPageViewModel) -> MainSearchViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let viewController = storyboard.instantiateViewController(identifier: "MainSearchViewController") as? MainSearchViewController else {
             return MainSearchViewController()
         }
+        viewController.mainPageViewModel = mainPageViewModel
         return viewController
     }
     

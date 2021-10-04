@@ -13,8 +13,12 @@ pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'FSCalendar'
 pod 'Alamofire'
+pod 'Kingfisher'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxDataSources'
+pod 'NSObject+Rx'
+
   target 'airbnbTests' do
     inherit! :search_paths
     # Pods for testing

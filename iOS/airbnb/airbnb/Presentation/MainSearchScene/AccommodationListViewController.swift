@@ -48,7 +48,7 @@ extension AccommodationListViewController {
     func configureDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: accommodationListCollectionView) {
             (collectionView, indexPath, model) -> UICollectionViewCell in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AccommodationListCell", for: indexPath) as? AccommodationListCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccommodationListCell.identifier, for: indexPath) as? AccommodationListCell else {
                 return AccommodationListCell()
             }
             cell.configureCell()

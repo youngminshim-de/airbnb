@@ -13,7 +13,7 @@ class ClosedTripPlaceDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClosedTripPlaceCell", for: indexPath) as? ClosedTripPlaceCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClosedTripPlaceCell.identifier, for: indexPath) as? ClosedTripPlaceCell else {
             return ClosedTripPlaceCell()
         }
         return cell

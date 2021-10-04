@@ -11,6 +11,8 @@ class ReservationConditionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
+    private (set) static var  identifier = "ReservationConditionCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

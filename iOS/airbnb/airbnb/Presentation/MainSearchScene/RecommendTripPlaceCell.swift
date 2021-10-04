@@ -8,5 +8,13 @@
 import UIKit
 
 class RecommendTripPlaceCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
+    private (set) static var  identifier = "RecommendTripPlaceCell"
+    
+    func configure(recommendTrip: Theme) {
+        imageView.load(url: recommendTrip.imageUrl)
+        titleLabel.text = recommendTrip.themeName
+    }
 }

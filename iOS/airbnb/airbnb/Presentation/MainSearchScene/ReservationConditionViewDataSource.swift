@@ -29,7 +29,7 @@ class ReservationConditionViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReservationConditionCell", for: indexPath) as? ReservationConditionCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReservationConditionCell.identifier, for: indexPath) as? ReservationConditionCell else {
             return ReservationConditionCell()
         }
         

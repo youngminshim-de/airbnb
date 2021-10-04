@@ -18,6 +18,8 @@ class AccommodationListCell: UICollectionViewCell {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var wishListButton: UIButton!
     
+    private (set) static var  identifier = "AccommodationListCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
