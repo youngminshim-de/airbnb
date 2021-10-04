@@ -13,7 +13,7 @@ class RecommendTripPlaceDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendTripPlaceCell", for: indexPath) as? RecommendTripPlaceCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendTripPlaceCell.identifier, for: indexPath) as? RecommendTripPlaceCell else {
             return RecommendTripPlaceCell()
         }
         return cell

@@ -12,6 +12,8 @@ class ClosedTripPlaceCell: UICollectionViewCell {
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    private (set) static var identifier = "ClosedTripPlaceCell"
+    
     func configure(closedTrip: NearbyPlace) {
         imageView.load(url: closedTrip.imageUrl)
         placeNameLabel.text = closedTrip.placeName

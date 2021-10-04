@@ -10,13 +10,11 @@ import Kingfisher
 
 extension UIImageView {
     func load(url: String) {
-        DispatchQueue.global().async {
-            guard let url = URL(string: url) else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.kf.setImage(with: url)
-            }
+        guard let url = URL(string: url) else {
+            return
+        }
+        DispatchQueue.main.async {
+            self.kf.setImage(with: url)
         }
     }
 }

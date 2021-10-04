@@ -11,10 +11,7 @@ import RxCocoa
 import NSObject_Rx
 import RxDataSources
 
-typealias NearbyPlaceSectionModel = SectionModel<Int, NearbyPlace>
-typealias ThemeSectionModel = SectionModel<Int, Theme>
-
-class MainSearchViewController: UIViewController{
+class MainSearchViewController: UIViewController {
 
     @IBOutlet weak var closedTripPlaceCollectionView: UICollectionView!
     @IBOutlet weak var recommendTripPlaceCollectionView: UICollectionView!
@@ -24,14 +21,10 @@ class MainSearchViewController: UIViewController{
 
     private var mainPageViewModel: MainPageViewModel?
     weak var coordinator: MainSearchSceneFlowCoordinator?
-//    private var closedTripPlaceDataSource: ClosedTripPlaceDataSource
-//    private var recommendTripPlaceDataSource: RecommendTripPlaceDataSource
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         coordinator?.presentSignInViewController()
-//        self.closedTripPlaceCollectionView.dataSource = closedTripPlaceDataSource
-//        self.recommendTripPlaceCollectionView.dataSource = recommendTripPlaceDataSource
         self.searchBar.searchTextField.backgroundColor = .white
         bindmainPageViewModel()
     }
@@ -42,26 +35,23 @@ class MainSearchViewController: UIViewController{
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-//        self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
-//        self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-//        self.closedTripPlaceDataSource = ClosedTripPlaceDataSource()
-//        self.recommendTripPlaceDataSource = RecommendTripPlaceDataSource()
         super.init(coder: coder)
     }
     
     func bindmainPageViewModel() {
+        
         mainPageViewModel?.mainPage.map{$0.nearbyPlaces}
-        .bind(to: closedTripPlaceCollectionView.rx.items(cellIdentifier: "ClosedTripPlaceCell", cellType: ClosedTripPlaceCell.self)) { row, closedTrip, cell in
+        .bind(to: closedTripPlaceCollectionView.rx.items(identifier: ClosedTripPlaceCell.identifier, cellType: ClosedTripPlaceCell.self)) { row, closedTrip, cell in
             cell.configure(closedTrip: closedTrip)
         }
         .disposed(by: rx.disposeBag)
 
         mainPageViewModel?.mainPage.map{$0.themes}
-        .bind(to: recommendTripPlaceCollectionView.rx.items(cellIdentifier: "RecommendTripPlaceCell", cellType: RecommendTripPlaceCell.self)) { row, recommendTrip, cell in
+        .bind(to: recommendTripPlaceCollectionView.rx.items(identifier: RecommendTripPlaceCell.identifier, cellType: RecommendTripPlaceCell.self)) { row, recommendTrip, cell in
             cell.configure(recommendTrip: recommendTrip)
         }
         .disposed(by: rx.disposeBag)

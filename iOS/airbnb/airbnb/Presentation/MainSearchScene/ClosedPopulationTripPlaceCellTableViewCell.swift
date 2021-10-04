@@ -12,6 +12,8 @@ class ClosedPopulationTripPlaceCellTableViewCell: UITableViewCell {
     @IBOutlet weak var tripPlaceImageView: UIImageView!
     @IBOutlet weak var tripPlaceNameLabel: UILabel!
     @IBOutlet weak var tripPlaceDistanceLabel: UILabel!
+    
+    private (set) static var  identifier = "ClosedPopulationTripPlaceCell"
     override func awakeFromNib() {
         super.awakeFromNib()
     }
