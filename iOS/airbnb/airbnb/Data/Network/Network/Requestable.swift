@@ -46,7 +46,9 @@ enum EndPoint: CustomStringConvertible {
         case .detailedAccommodationURL:
             return "url/api/"
         case .mockURL:
-            return "https://dadff59e-9285-4889-83fa-945917b01911.mock.pstmn.io/api/main"
+            return "https://da-945917b01911.mock.pstmn.io/api/main"
+//        case .mockURL:
+//            return "https://dadff59e-9285-4889-83fa-945917b01911.mock.pstmn.io/api/main"
         }
     }
 }

@@ -30,7 +30,7 @@ class MainSearchSceneFlowCoordinator: ChildCoordinator {
     func presentSignInViewController() {
         let signInViewController = dependencies.makeSignInViewController()
         signInViewController.modalPresentationStyle = .fullScreen
-        rootViewController.present(signInViewController, animated: true, completion: nil)
+        rootViewController.children.first?.present(signInViewController, animated: true, completion: nil)
     }
     
     func pushAccomodationSearchViewController() {
@@ -70,6 +70,13 @@ class MainSearchSceneFlowCoordinator: ChildCoordinator {
     
     func popViewController() {
         rootViewController.popViewController(animated: true)
+    }
+    
+    func presentAlertController(with message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        rootViewController.present(alertController, animated: false)
     }
     
     func start() {
