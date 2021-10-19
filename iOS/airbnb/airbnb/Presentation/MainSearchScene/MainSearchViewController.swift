@@ -24,7 +24,7 @@ class MainSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        coordinator?.presentSignInViewController()
+//        coordinator?.presentSignInViewController()
         self.searchBar.searchTextField.backgroundColor = .white
         bindmainPageViewModel()
     }
@@ -44,13 +44,22 @@ class MainSearchViewController: UIViewController {
     
     func bindmainPageViewModel() {
         
+        mainPageViewModel?.mainPage
+        .debug()
+        .subscribe(onError: { error in
+            self.coordinator?.presentAlertController(with: "\(error)")
+        })
+        .disposed(by: rx.disposeBag)
+        
         mainPageViewModel?.mainPage.map{$0.nearbyPlaces}
+        .catchAndReturn([])
         .bind(to: closedTripPlaceCollectionView.rx.items(identifier: ClosedTripPlaceCell.identifier, cellType: ClosedTripPlaceCell.self)) { row, closedTrip, cell in
             cell.configure(closedTrip: closedTrip)
         }
         .disposed(by: rx.disposeBag)
 
         mainPageViewModel?.mainPage.map{$0.themes}
+        .catchAndReturn([])
         .bind(to: recommendTripPlaceCollectionView.rx.items(identifier: RecommendTripPlaceCell.identifier, cellType: RecommendTripPlaceCell.self)) { row, recommendTrip, cell in
             cell.configure(recommendTrip: recommendTrip)
         }
@@ -69,6 +78,13 @@ class MainSearchViewController: UIViewController {
     
     func injectionCoordinator(with coordinator: MainSearchSceneFlowCoordinator) {
         self.coordinator = coordinator
+    }
+    
+    func presentAlertController(with message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: false, completion: nil)
     }
 }
 

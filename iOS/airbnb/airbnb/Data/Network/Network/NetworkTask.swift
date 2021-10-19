@@ -38,6 +38,8 @@ class NetworkTask<Input: Requestable, Output: Decodable>: Task<Input, Output> {
             } catch {
                 eventer.onError(NetworkError.failedDecoding)
             }
+        }, onError: { error in
+            eventer.onError(error)
         }).disposed(by: rx.disposeBag)
 
         return eventer
